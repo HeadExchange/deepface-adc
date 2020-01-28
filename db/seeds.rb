@@ -23,11 +23,13 @@
     answers: [
       {
         position: 0,
-        phrase: 'Да'
+        phrase: 'Да',
+        next_stage: 2
       },
       {
         position: 1,
-        phrase: 'Нет'
+        phrase: 'Нет',
+        next_stage: 3
       }
     ]
   }, {
@@ -45,10 +47,12 @@
     answers: [
       {
         position: 0,
-        phrase: 'Вообще-то знаю'
+        phrase: 'Вообще-то знаю',
+        next_stage: 2
       }, {
         position: 1,
-        phrase: 'Нет'
+        phrase: 'Нет',
+        next_stage: 3
       }
     ]
   }, {
@@ -69,10 +73,12 @@
     answers: [
       {
         position: 0,
-        phrase: 'Ну точно, было'
+        phrase: 'Ну точно, было',
+        next_stage: 2
       }, {
         position: 1,
-        phrase: 'Ты меня с кем-то путаешь'
+        phrase: 'Ты меня с кем-то путаешь',
+        next_stage: 3
       }
     ]
   }, {
@@ -93,10 +99,12 @@
     answers: [
       {
         position: 0,
-        phrase: 'ДИП!'
+        phrase: 'ДИП!',
+        next_stage: 2
       }, {
         position: 1,
-        phrase: 'ЭЭЭ, ЧТО?'
+        phrase: 'ЭЭЭ, ЧТО?',
+        next_stage: 3
       }
     ]
   }, {
@@ -305,6 +313,7 @@
 def seed_data
   drop_db
   create_steps
+  create_next_steps
 end
 
 def drop_db
@@ -314,13 +323,13 @@ def drop_db
 end
 
 def create_steps
-  @steps.each do |step|
-    puts step
+  @steps.each_with_index do |step, index|
     s = Step.create!(opening: step[:opening])
     puts "Step just created with params #{ s.opening }"
+    @steps[index][:id] = s.id
 
     create_replicas(s, step[:replicas])
-    create_answers(s, step[:answers])
+    create_answers(index, s, step[:answers])
   end
 end
 
@@ -331,10 +340,29 @@ def create_replicas(step, replicas)
   end
 end
 
-def create_answers(step, answers)
-  answers.each do |answer|
-    a = step.answers.create!(answer)
+def create_answers(index, step, answers)
+  answers.each_with_index do |answer, i|
+    a = step.answers.create!(position: answer[:position], phrase: answer[:phrase])
     puts "Answer just created with phrase '#{ a.phrase }' for step with id #{ a.step.id }"
+
+    @steps[index][:answers][i][:id] = a.id
+  end
+end
+
+def create_next_steps
+  @steps.each do |step|
+    step[:answers].each do |answer|
+      puts "before if"
+      if answer.has_key?(:next_stage)
+        puts "after if"
+        @steps.each do |s|
+          if s[:stage] == answer[:next_stage]
+            ns = NextStep.create!(step_id: s[:id], answer_id: answer[:id])
+            puts "NextStep just create for step with id #{ ns.step.id } and answer with id #{ ns.answer.id }"
+          end
+        end
+      end
+    end
   end
 end
 
