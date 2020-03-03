@@ -12,7 +12,7 @@ export default class Replica extends React.Component {
     if (type == 'TextReplica') {
       replica = <p>{phrase}</p>
     } else if (type == 'ImageReplica') {
-      replica = <img src={image.url} />
+      replica = <img src={image.url} width="100" />
     }
 
     return <div>{replica}</div>
