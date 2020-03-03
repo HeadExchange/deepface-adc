@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2020_01_21_093813) do
   create_table "replicas", force: :cascade do |t|
     t.integer "position"
     t.integer "step_id"
-    t.string "type"
+    t.string "type", default: "TextReplica"
     t.integer "timeout", default: 1000
     t.string "phrase"
     t.string "image"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2020_01_21_093813) do
   end
 
   create_table "steps", force: :cascade do |t|
+    t.string "title"
     t.boolean "opening", default: false
     t.boolean "gift", default: false
     t.datetime "created_at", precision: 6, null: false

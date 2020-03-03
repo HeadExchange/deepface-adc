@@ -1,5 +1,6 @@
 @steps = [
   {
+    title: 'Openning First',
     stage: 1,
     opening: true,
     replicas: [
@@ -33,6 +34,7 @@
       }
     ]
   }, {
+    title: 'Openning Second',
     stage: 1,
     opening: true,
     replicas: [
@@ -56,6 +58,7 @@
       }
     ]
   }, {
+    title: 'Openning Third',
     stage: 1,
     opening: true,
     replicas: [
@@ -82,6 +85,7 @@
       }
     ]
   }, {
+    title: 'Openning Fours',
     stage: 1,
     opening: true,
     replicas: [
@@ -108,6 +112,7 @@
       }
     ]
   }, {
+    title: 'Stage 2 Step 1',
     stage: 2,
     opening: false,
     replicas: [
@@ -139,6 +144,7 @@
       }
     ]
   }, {
+    title: 'Stage 2 Step 2',
     stage: 2,
     opening: false,
     replicas: [
@@ -160,6 +166,7 @@
       }
     ]
   }, {
+    title: 'Stage 2 Step 3',
     stage: 2,
     opening: false,
     replicas: [
@@ -184,6 +191,7 @@
       }
     ]
   }, {
+    title: 'Stage 2 Step 4',
     stage: 2,
     opening: false,
     replicas: [
@@ -208,6 +216,7 @@
       }
     ]
   }, {
+    title: 'Stage 3 Step 1',
     stage: 3,
     opening: false,
     replicas: [
@@ -239,6 +248,7 @@
       }
     ]
   }, {
+    title: 'Stage 3 Step 2',
     stage: 3,
     opening: false,
     replicas: [
@@ -260,6 +270,7 @@
       }
     ]
   }, {
+    title: 'Stage 3 Step 3',
     stage: 3,
     opening: false,
     replicas: [
@@ -284,6 +295,7 @@
       }
     ]
   }, {
+    title: 'Stage 3 Step 4',
     stage: 3,
     opening: false,
     replicas: [
@@ -312,6 +324,7 @@
 
 def seed_data
   drop_db
+  # drop_uploads
   create_steps
   create_next_steps
 end
@@ -322,9 +335,14 @@ def drop_db
   Rake::Task['db:migrate'].invoke
 end
 
+def drop_uploads
+  folders = Dir.glob(File.join(Rails.root, 'public/uploads/*'))
+  folders.each { |f| FileUtils.rm_rf(f) }
+end
+
 def create_steps
   @steps.each_with_index do |step, index|
-    s = Step.create!(opening: step[:opening])
+    s = Step.create!(opening: step[:opening], title: step[:title])
     puts "Step just created with params #{ s.opening }"
     @steps[index][:id] = s.id
 
@@ -334,8 +352,15 @@ def create_steps
 end
 
 def create_replicas(step, replicas)
-  replicas.each do |replica|
-    r = step.replicas.create!(replica)
+  replicas.shuffle.each_with_index do |replica, index|
+
+    if index.odd?
+      replica[:image] = upload_replica_image
+      r = step.image_replicas.create!(replica)
+    else
+      r = step.text_replicas.create!(replica)
+    end
+
     puts "Replica just created with phrase '#{ r.phrase }' for step with id #{ r.step.id }"
   end
 end
@@ -364,6 +389,12 @@ def create_next_steps
       end
     end
   end
+end
+
+def upload_replica_image
+  uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, 'db/seed_images/*')).sample))
+  uploader
 end
 
 seed_data

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gift:</strong>
+  <%= step.gift %>
+</p>
+
+<p>
+  <strong>Opening:</strong>
+  <%= step.opening %>
+</p>
+
+<%= link_to 'Edit', edit_admin_step_path(step) %> |
+<%= link_to 'Back', admin_steps_path %>
+
+<hr>
+
+<h2>Replicas</h2>
+<%= render step.replicas %>
+<br>
+<%= link_to 'New Text Replica', new_admin_step_text_replica_path(step) %>
+<%= link_to 'New Image Replica', new_admin_step_image_replica_path(step) %>
+
+<hr>
+
+<h2>Answers</h2>
+<%= render step.answers %>
+<br>
+<%= link_to 'New Answer', new_admin_step_answer_path(step) %>

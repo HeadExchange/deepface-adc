@@ -1,0 +1,9 @@
+<div>
+  <%= answer.position %>
+  <%= answer.effect %>
+  <%= answer.phrase %>
+  <%= link_to 'Show', admin_answer_path(answer) %>
+  <%= link_to 'Edit', edit_admin_step_answer_path(@step, answer) %>
+  <%= link_to 'Destroy', admin_answer_path(answer), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Choose Answer', next_step_admin_answer_path(answer) %>
+</div>
