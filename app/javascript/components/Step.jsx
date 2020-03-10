@@ -24,7 +24,6 @@ export default class Step extends React.Component {
 
     return (
       <div>
-        {title}
         {replicaElements}
         {answerElements}
       </div>

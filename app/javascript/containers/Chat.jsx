@@ -43,6 +43,22 @@ export default class Chat extends React.Component {
       )
     })
 
-    return <div>{steps}</div>
+    return (
+      <div className="background">
+        <div className="shadow"></div>
+        <section className="timeline">
+          <div className="timelineBar">
+            <div className="dip"></div>
+          </div>
+          <div>
+            <p>( to the end of the chat )</p>
+            <p>🖤 Don't give up, stickers want to be yours, bro 🖤 </p>
+          </div>
+        </section>
+        <section className="chat">
+          <div>{steps}</div>
+        </section>
+      </div>
+    )
   }
 }

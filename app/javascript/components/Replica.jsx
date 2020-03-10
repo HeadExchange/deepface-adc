@@ -10,9 +10,23 @@ export default class Replica extends React.Component {
     let replica
 
     if (type == 'TextReplica') {
-      replica = <p>{phrase}</p>
+      replica = (
+        <div className="chatBlock">
+          <div className="userDip"></div>
+          <div className="chatPhrase">
+            <p>{phrase}</p>
+          </div>
+        </div>
+      )
     } else if (type == 'ImageReplica') {
-      replica = <img src={image.url} width="100" />
+      replica = (
+        <div className="chatBlock">
+          <div className="userDip"></div>
+          <div className="chatImage">
+            <img src={image.url} width="100" />
+          </div>
+        </div>
+      )
     }
 
     return <div>{replica}</div>

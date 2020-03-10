@@ -20,7 +20,10 @@ export default class Answer extends React.Component {
           handleAnswerClick(id)
         }}
       >
-        {phrase}
+        <div className="answerBlock">
+          <div className="chatAnswer">{phrase}</div>
+          <div className="userDip"></div>
+        </div>
       </div>
     )
   }
