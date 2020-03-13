@@ -1050,7 +1050,7 @@ def create_next_steps
 end
 
 def upload_replica_image
-  uploader = CoverUploader.new(ImageReplica.new, :image)
+  uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "db/seed_images/*")).sample))
   uploader
 end

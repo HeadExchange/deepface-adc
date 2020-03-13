@@ -25,7 +25,10 @@ export default class Step extends React.Component {
     return (
       <div>
         {replicaElements}
-        {answerElements}
+        <div className="answerBlock">
+          <div className="answerElements">{answerElements}</div>
+          <div className="userDip"></div>
+        </div>
       </div>
     )
   }

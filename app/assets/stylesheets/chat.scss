@@ -1,14 +1,17 @@
 @import 'reset.scss';
 @import 'fonts.scss';
 
+body {
+  background: #79ff39;
+}
 .background {
   width: 100vw;
   height: 100vh;
-  background: #79ff39;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  overflow: scroll;
 
   .shadow {
     position: fixed;
@@ -18,6 +21,17 @@
     background-image: linear-gradient(
       rgba(121, 255, 57, 1),
       rgba(121, 255, 57, 0)
+    );
+    z-index: 1;
+  }
+  .shadowBottom {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 3vh;
+    background-image: linear-gradient(
+      rgba(121, 255, 57, 0),
+      rgba(121, 255, 57, 1)
     );
     z-index: 1;
   }
@@ -54,18 +68,24 @@
 
   .chat {
     width: 95.5vw;
-    overflow: scroll;
     display: flex;
+    overflow: scroll;
+    scroll-behavior: smooth;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     justify-content: flex-end;
     position: relative;
-    bottom: 3vh;
+    /* bottom: 4vh; */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -ms-overflow-style: none;
+    ::-webkit-scrollbar {
+      display: none;
+    }
 
     div {
-      width: 100%;
+      width: auto;
+      overflow: scroll;
 
       .chatBlock {
         display: flex;
@@ -107,6 +127,9 @@
         font-weight: normal;
         font-family: 'PT Root UI';
         width: fit-content;
+        &:first-child {
+          margin-top: 100px;
+        }
       }
 
       .answerBlock {
@@ -114,26 +137,38 @@
         flex-direction: row;
         align-items: flex-end;
         justify-content: flex-end;
+        /* flex-wrap: wrap; */
+        margin: 100px 0;
 
-        .chatAnswer {
-          float: right;
-          font-family: 'PT Root UI';
-          font-weight: 400;
-          font-size: 64px;
-          background: #262626;
-          border-radius: 60px 60px 4px 60px;
-          text-align: center;
-          padding: 32px 64px;
-          margin: 0 10px 10px 0;
-          color: #ffffff;
-          width: fit-content;
+        .answerElements {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: flex-end;
+          flex-wrap: wrap;
 
-          &:hover {
-            background: #ffffff;
-            color: #262626;
-            box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.86);
-            cursor: pointer;
-            transition: 0.12s ease-in-out;
+          .answer {
+            .chatAnswer {
+              float: right;
+              font-family: 'PT Root UI';
+              font-weight: 400;
+              font-size: 64px;
+              text-align: left;
+              background: #262626;
+              border-radius: 60px 60px 4px 60px;
+              padding: 32px 64px;
+              margin: 0 10px 10px 0;
+              color: #ffffff;
+              width: fit-content;
+
+              &:hover {
+                background: #ffffff;
+                color: #262626;
+                box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.86);
+                cursor: pointer;
+                transition: 0.12s ease-in-out;
+              }
+            }
           }
         }
         .userDip {
@@ -141,7 +176,7 @@
           height: 45px;
           background: black;
           border-radius: 100%;
-          margin-left: 21px;
+          margin: 0 0 10px 21px;
         }
       }
     }

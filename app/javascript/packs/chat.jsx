@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // const data = JSON.parse(document.getElementById('data').dataset.props)
 
   let step
+  let div
+  div = document.createElement('div')
+  div.setAttribute('class', 'chatBubble')
 
   fetch('/v1/chat/index.json')
     .then(response => {
@@ -18,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
       ReactDOM.render(
         <Chat step={step} />,
-        document.body.appendChild(document.createElement('div'))
+        // document.body.appendChild(document.createElement('div'))
+        document.body.appendChild(div)
       )
     })
 })
