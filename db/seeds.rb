@@ -1052,7 +1052,7 @@
 
 def seed_data
   drop_db
-  drop_uploads
+  #drop_uploads
   create_steps
   create_next_steps
 end
@@ -1122,8 +1122,9 @@ def create_next_steps
 end
 
 def upload_replica_image
-  uploader = CoverUploader.new(ImageReplica.new, :image)
-  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "db/seed_images/*")).sample))
+  uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "app/assets/images/quizes/*")).sample))
+  #uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "db/seed_images/*")).sample))
   uploader
 end
 
