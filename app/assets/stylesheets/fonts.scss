@@ -3,6 +3,8 @@
   src: asset-url('ADCCommunityPoster-SemiBold.otf');
   src: local('ADC'),
     asset-url('ADCCommunityPoster-SemiBold.otf') format('opentype');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @font-face {
@@ -10,6 +12,8 @@
   src: asset-url('PT_Root_UI_Regular.otf');
   src: local('PT Root UI Regular'),
     asset-url('PT_Root_UI_Regular.otf') format('opentype');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   /*   font-weight: normal;
 font-style: normal; */
 }
@@ -19,6 +23,8 @@ font-style: normal; */
   src: asset-url('PT_Root_UI_Medium.otf');
   src: local('PT Root UI Medium'),
     asset-url('PT_Root_UI_Medium.otf') format('opentype');
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   /*   font-weight: 400;
 font-style: normal; */
 }

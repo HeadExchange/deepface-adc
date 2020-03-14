@@ -194,6 +194,13 @@
         phrase: 'Стикерпак',
         type: 'ImageReplica'
       }
+    ],
+    answers: [
+      {
+        position: 0,
+        phrase: 'Забрать',
+        next_stage: 28
+      }
     ]
   },{
     title: 'Человек не знает дипа 1',
@@ -274,10 +281,11 @@
       {
         position: 0,
         phrase: 'Дизайнер',
-        next_stage: 11
+        next_stage: 12
       },{
         position: 0,
-        phrase: 'Прогер'
+        phrase: 'Прогер',
+        next_stage: 21
       },{
         position: 0,
         phrase: '???',
@@ -298,10 +306,11 @@
       {
         position: 0,
         phrase: 'Дизайнер',
-        next_stage: 11
+        next_stage: 12
       },{
         position: 0,
-        phrase: 'Прогер'
+        phrase: 'Прогер',
+        next_stage: 21
       },{
         position: 0,
         phrase: '???',
@@ -322,10 +331,11 @@
       {
         position: 0,
         phrase: 'Дизайнер',
-        next_stage: 11
+        next_stage: 12
       },{
         position: 0,
-        phrase: 'Прогер'
+        phrase: 'Прогер',
+        next_stage: 21
       },{
         position: 0,
         phrase: '???',
@@ -337,11 +347,18 @@
     stage: 6,
     opening: false,
     replicas:[
-    {
-    position: 0,
-    image: '../public/uploads/meme.jpg',
-    type: 'ImageReplica'
-    }
+      {
+      position: 0,
+      image: '../public/uploads/meme.jpg',
+      type: 'ImageReplica'
+      }
+    ],
+    answers: [
+      {
+        position: 0,
+        phrase: 'Эм, ну смешно...',
+        next_stage: 7
+      }
     ]
     },{
     title: 'Квиз что раньше 1',
@@ -357,11 +374,13 @@
       {
         position: 0,
         phrase: 'Sketch',
-        effect: ''
+        effect: '',
+        next_stage: 8
       },{
         position: 0,
         phrase: 'Figma',
-        effect: ''
+        effect: '',
+        next_stage: 8
       }
     ]
   },{
@@ -378,11 +397,13 @@
       {
         position: 0,
         phrase: 'HTML',
-        effect: ''
+        effect: '',
+        next_stage: 9
       },{
         position: 0,
         phrase: 'Photoshop',
-        effect: ''
+        effect: '',
+        next_stage: 9
       }
     ]
   },{
@@ -399,11 +420,13 @@
       {
         position: 0,
         phrase: 'GUI',
-        effect: ''
+        effect: '',
+        next_stage: 10
       },{
         position: 0,
         phrase: 'TUI',
-        effect: ''
+        effect: '',
+        next_stage: 10
       }
     ]
   },{
@@ -427,7 +450,8 @@
     answers: [
       {
         position: 0,
-        phrase: 'здесь должен быть инпут'
+        phrase: 'здесь должен быть инпут',
+        next_stage: 11
       }
     ]
   },{
@@ -446,20 +470,19 @@
       {
         position: 2,
         image: '',
-        type: 'ImageReplica',
-        next_stage: 25
+        type: 'ImageReplica'
       }
     ],
     answers: [
       {
         position: 0,
         phrase: 'Забрать',
-        next_stage: 25
+        next_stage: 28
       }
     ]
   },{
     title: 'Квиз по интерфейсам 1',
-    stage: 11,
+    stage: 12,
     opening: false,
     replicas:[
       {
@@ -476,24 +499,28 @@
       {
         position: 0,
         phrase: 'Alt burger',
-        effect: ''
+        effect: '',
+        next_stage: 13
       },{
         position: 0,
         phrase: 'Cmd burger',
-        effect: ''
+        effect: '',
+        next_stage: 13
       },{
         position: 0,
         phrase: 'Ctrl burger',
-        effect: ''
+        effect: '',
+        next_stage: 13
       },{
         position: 0,
         phrase: 'Shift burger',
-        effect: ''
+        effect: '',
+        next_stage: 13
       }
     ]
   },{
     title: 'Квиз по интерфейсам 2',
-    stage: 12,
+    stage: 13,
     opening: false,
     replicas:[
     {
@@ -510,24 +537,28 @@
       {
         position: 0,
         phrase: 'Сендвич',
-        effect: ''
+        effect: '',
+        next_stage: 14
       },{
         position: 0,
         phrase: 'Гамбургер',
-        effect: ''
+        effect: '',
+        next_stage: 14
       },{
         position: 0,
         phrase: 'Капкейк',
-        effect: ''
+        effect: '',
+        next_stage: 14
       },{
         position: 0,
         phrase: 'Пирожок',
-        effect: ''
+        effect: '',
+        next_stage: 14
       }
     ]
   },{
     title: 'Квиз по интерфейсам 3',
-    stage: 13,
+    stage: 14,
     opening: false,
     replicas:[
       {
@@ -544,20 +575,23 @@
       {
         position: 0,
         phrase: 'Митбол',
-        effect: ''
+        effect: '',
+        next_stage: 15
       },{
         position: 0,
         phrase: 'Кебаб',
-        effect: ''
+        effect: '',
+        next_stage: 15
       },{
         position: 0,
         phrase: 'Онигири',
-        effect: ''
+        effect: '',
+        next_stage: 15
       }
     ]
   },{
     title: 'Квиз по интерфейсам 4',
-    stage: 14,
+    stage: 15,
     opening: false,
     replicas:[
       {
@@ -577,24 +611,28 @@
       {
         position: 0,
         phrase: 'Кебаб',
-        effect: ''
+        effect: '',
+        next_stage: 16
       },{
         position: 0,
         phrase: 'Шашлык',
-        effect: ''
+        effect: '',
+        next_stage: 16
       },{
         position: 0,
         phrase: 'Шарики',
-        effect: ''
+        effect: '',
+        next_stage: 16
       },{
         position: 0,
         phrase: 'Бенто',
-        effect: ''
+        effect: '',
+        next_stage: 16
       }
     ]
   },{
     title: 'Квиз по интерфейсам 5',
-    stage: 14,
+    stage: 16,
     opening: false,
     replicas:[
       {
@@ -607,20 +645,23 @@
       {
         position: 0,
         phrase: 'Это что меню?',
-        effect: ''
+        effect: '',
+        next_stage: 17
       },{
         position: 0,
         phrase: 'Онигири',
-        effect: ''
+        effect: '',
+        next_stage: 17
       },{
         position: 0,
         phrase: 'Бенто',
-        effect: ''
+        effect: '',
+        next_stage: 17
       }
     ]
   },{
     title: 'Квиз по интерфейсам 6',
-    stage: 15,
+    stage: 17,
     opening: false,
     replicas:[
       {
@@ -638,28 +679,33 @@
       {
         position: 0,
         phrase: 'jpg',
-        effect: ''
+        effect: '',
+        next_stage: 18
       },{
         position: 0,
         phrase: 'svg',
-        effect: ''
+        effect: '',
+        next_stage: 18
       },{
         position: 0,
         phrase: 'tiff',
-        effect: ''
+        effect: '',
+        next_stage: 18
       },{
         position: 0,
         phrase: 'dip',
-        effect: ''
+        effect: '',
+        next_stage: 18
       },{
         position: 0,
         phrase: 'gif',
-        effect: ''
+        effect: '',
+        next_stage: 18
       }
     ]
   },{
     title: 'Квиз по интерфейсам 7',
-    stage: 16,
+    stage: 18,
     opening: false,
     replicas:[
       {
@@ -679,17 +725,17 @@
         position: 0,
         phrase: 'Символ',
         effect: '',
-        next_stage: 17
+        next_stage: 19
       },{
         position: 0,
         phrase: 'Иконка',
         effect: '',
-        next_stage: 18
+        next_stage: 20
       }
     ]
   },{
     title: 'Квиз по интерфейсам 8',
-    stage: 17,
+    stage: 19,
     opening: false,
     replicas:[
       {
@@ -699,10 +745,17 @@
         position: 1,
         phrase: 'Ты вау!'
       }
+    ],
+    answers: [
+      {
+        position: 0,
+        phrase: 'Супер',
+        next_stage: 28
+      }
     ]
     },{
     title: 'Квиз по интерфейсам 9',
-    stage: 18,
+    stage: 20,
     opening: false,
     replicas:[
       {
@@ -713,13 +766,19 @@
         phrase: 'Правильно: символ'
       },{
         position: 2,
-        phrase: 'Иконка показывает нам визуальное представление вещи, которая выглядит реалистично по отношению к изображаемому предмету. А символ не обязательно выглядит как то, что он представляет. Иконка иллюстративна, а символ изображает предмет более абстрактно. Сложно представить что-то настолько широкое и абстрактное, как музыка, с фиксированным единым визуальным образом.',
-        next_stage: 24
+        phrase: 'Иконка показывает нам визуальное представление вещи, которая выглядит реалистично по отношению к изображаемому предмету. А символ не обязательно выглядит как то, что он представляет. Иконка иллюстративна, а символ изображает предмет более абстрактно. Сложно представить что-то настолько широкое и абстрактное, как музыка, с фиксированным единым визуальным образом.'
+      }
+    ],
+    answers: [
+      {
+        position: 0,
+        phrase: 'Супер',
+        next_stage: 28
       }
     ]
   },{
     title: 'Квиз по коду 1',
-    stage: 18,
+    stage: 21,
     opening: false,
     replicas:[
       {
@@ -731,20 +790,23 @@
       {
         position: 0,
         phrase: 'Бежать на stackoverflow',
-        effect: ''
+        effect: '',
+        next_stage: 22
       },{
         position: 0,
         phrase: 'Спросить маму',
-        effect: ''
+        effect: '',
+        next_stage: 22
       },{
         position: 0,
         phrase: 'Спросить папу',
-        effect: ''
+        effect: '',
+        next_stage: 22
       }
     ]
   },{
     title: 'Квиз по коду 2',
-    stage: 19,
+    stage: 22,
     opening: false,
     replicas:[
       {
@@ -756,20 +818,23 @@
       {
         position: 0,
         phrase: 'flex-start',
-        effect: ''
+        effect: '',
+        next_stage: 23
       },{
         position: 0,
         phrase: 'flex-end',
-        effect: ''
+        effect: '',
+        next_stage: 23
       },{
         position: 0,
         phrase: 'space-around',
-        effect: ''
+        effect: '',
+        next_stage: 23
       }
     ]
   },{
     title: 'Квиз по коду 3',
-    stage: 20,
+    stage: 23,
     opening: false,
     replicas:[
       {
@@ -782,22 +847,22 @@
         position: 0,
         phrase: 'UTF-8',
         effect: '',
-        next_stage: 23
+        next_stage: 26
       },{
         position: 0,
         phrase: 'UTF-16',
         effect: '',
-        next_stage: 22
+        next_stage: 25
       },{
         position: 0,
         phrase: 'UTF-32',
         effect: '',
-        next_stage: 21
+        next_stage: 24
       }
     ]
   },{
     title: 'Квиз по коду 3',
-    stage: 21,
+    stage: 24,
     opening: false,
     replicas:[
       {
@@ -810,17 +875,17 @@
         position: 0,
         phrase: 'UTF-8',
         effect: '',
-        next_stage: 23
+        next_stage: 26
       },{
         position: 0,
         phrase: 'UTF-16',
         effect: '',
-        next_stage: 22
+        next_stage: 25
       }
     ]
   },{
     title: 'Квиз по коду 3',
-    stage: 22,
+    stage: 25,
     opening: false,
     replicas:[
       {
@@ -833,22 +898,29 @@
         position: 0,
         phrase: 'UTF-8',
         effect: '',
-        next_stage: 23
+        next_stage: 26
       }
     ]
   },{
     title: 'Квиз по коду 4',
-    stage: 23,
+    stage: 26,
     opening: false,
     replicas:[
       {
         position: 0,
         phrase: 'Спасибо тебе, человек, что поправил мой слетевший юникод! Можем болтаь дальше.'
       }
+    ],
+    answers: [
+      {
+        position: 0,
+        phrase: 'Супер',
+        next_stage: 27
+      }
     ]
   },{
     title: 'Финал квизов',
-    stage: 24,
+    stage: 27,
     opening: false,
     replicas:[
       {
@@ -865,12 +937,12 @@
       {
         position: 0,
         phrase: 'Забрать',
-        next_stage: 25
+        next_stage: 28
       }
     ]
   },{
     title: 'Настоящие стикеры 1',
-    stage: 25,
+    stage: 28,
     opening: false,
     replicas:[
       {
@@ -882,16 +954,16 @@
       {
         position: 0,
         phrase: 'Конечно!',
-        next_stage: 27
+        next_stage: 30
       },{
         position: 0,
         phrase: 'Нет',
-        next_stage: 26
+        next_stage: 29
       }
     ]
   },{
     title: 'Не хочет настоящие стикеры ',
-    stage: 26,
+    stage: 29,
     opening: false,
     replicas:[
       {
@@ -910,7 +982,7 @@
     ]
   },{
     title: 'Настоящие стикеры 1.2',
-    stage: 25,
+    stage: 28,
     opening: false,
     replicas:[
       {
@@ -922,16 +994,16 @@
       {
         position: 0,
         phrase: 'Хочу!',
-        next_stage: 27
+        next_stage: 30
       },{
         position: 0,
         phrase: 'Нет',
-        next_stage: 26
+        next_stage: 29
       }
     ]
   },{
     title: 'Настоящие стикеры 1.3',
-    stage: 25,
+    stage: 28,
     opening: false,
     replicas:[
       {
@@ -949,16 +1021,16 @@
       {
         position: 0,
         phrase: 'Да!',
-        next_stage: 27
+        next_stage: 30
       },{
         position: 0,
         phrase: 'Нет',
-        next_stage: 26
+        next_stage: 29
       }
     ]
   },{
     title: 'Настоящие стикеры 2',
-    stage: 27,
+    stage: 30,
     opening: false,
     replicas:[
       {
@@ -1050,7 +1122,7 @@ def create_next_steps
 end
 
 def upload_replica_image
-  uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
+  uploader = CoverUploader.new(ImageReplica.new, :image)
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "db/seed_images/*")).sample))
   uploader
 end

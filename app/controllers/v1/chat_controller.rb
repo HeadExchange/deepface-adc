@@ -8,8 +8,13 @@ class V1::ChatController < ApplicationController
 
   def answer
     answer = Answer.find(params[:id])
-    step = answer.steps.sample
-    render json: step.as_json
+
+    if answer.steps.any?
+      step = answer.steps.sample
+      render json: step.as_json
+    else
+      render json: {}
+    end
   end
 
 end
