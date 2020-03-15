@@ -106,7 +106,7 @@ body {
         }
 
         .phraseElements {
-          width: 65%;
+          width: 66%;
           height: auto;
         }
       }
@@ -140,9 +140,8 @@ body {
         width: fit-content;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        /*         &:first-child {
-  margin-top: 100px;
-} */
+        float: left;
+        max-width: 918px;
       }
 
       .answerBlock {
