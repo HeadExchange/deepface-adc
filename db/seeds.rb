@@ -191,8 +191,8 @@
         phrase: 'Ладно, я добрый, держи стикерпак за честность'
       },{
         position: 2,
-        phrase: 'Стикерпак',
-        type: 'ImageReplica'
+        type: 'ImageReplica',
+        image: 'sticker_2.jpg',
       }
     ],
     answers: [
@@ -349,7 +349,7 @@
     replicas:[
       {
       position: 0,
-      image: '../public/uploads/meme.jpg',
+      image: 'meme.jpg',
       type: 'ImageReplica'
       }
     ],
@@ -492,7 +492,8 @@
       {
         position: 1,
         image: '',
-        type: 'ImageReplica'
+        type: 'ImageReplica',
+        image: 'alt.jpg'
       }
     ],
     answers: [
@@ -530,7 +531,8 @@
     {
       position: 1,
       image: '',
-      type: 'ImageReplica'
+      type: 'ImageReplica',
+      image: 'burger.jpg'
       }
     ],
     answers: [
@@ -568,7 +570,8 @@
       {
         position: 1,
         image: '',
-        type: 'ImageReplica'
+        type: 'ImageReplica',
+        image: 'kebab.jpg'
       }
     ],
     answers: [
@@ -604,7 +607,8 @@
       {
         position: 1,
         image: '',
-        type: 'ImageReplica'
+        type: 'ImageReplica',
+        image: 'meatball.jpg'
       }
     ],
     answers: [
@@ -638,7 +642,8 @@
       {
         position: 0,
         image: '',
-        type: 'ImageReplica'
+        type: 'ImageReplica',
+        image: 'bento.jpg'
       }
     ],
     answers: [
@@ -716,7 +721,7 @@
         phrase: 'Что это иконка или символ?'
       },{
         position: 2,
-        image: '',
+        image: 'symbol.jpg',
         type: 'ImageReplica'
       }
     ],
@@ -929,7 +934,7 @@
       },
       {
         position: 1,
-        image: '',
+        image: 'sticker_1.jpg',
         type: 'ImageReplica',
       }
     ],
@@ -1052,7 +1057,7 @@
 
 def seed_data
   drop_db
-  #drop_uploads
+  drop_uploads
   create_steps
   create_next_steps
 end
@@ -1122,9 +1127,15 @@ def create_next_steps
 end
 
 def upload_replica_image
-  uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
-  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "app/assets/images/quizes/*")).sample))
-  #uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "db/seed_images/*")).sample))
+  #uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
+  #replica = step.replicas.find(params(image: replica[:image]))
+  #replica = Replica.find(params[type: 'ImageReplica'])
+  #uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
+  uploader = ReplicaImageUploader.new(ImageReplica.new, image: replica[:image])
+  #image == Replica.find(params(image: replica[:image]))
+
+  #uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "/app/assets/images/#{replica[:image]}"))))
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "app/assets/images/#{image[:image]}"))))
   uploader
 end
 

@@ -155,9 +155,12 @@ body {
           align-items: flex-end;
           justify-content: flex-end;
           flex-wrap: wrap;
-          width: 70%;
+          width: 73%;
 
           .answer {
+            float: right;
+            max-width: 973px;
+
             .chatAnswer {
               float: right;
               font-family: 'PT Root UI Medium';
