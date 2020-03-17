@@ -1,0 +1,185 @@
+@import 'reset.scss';
+@import 'fonts.scss';
+
+@media screen and (min-width:375px) and (max-width:1024px){
+
+body {
+  background: pink;
+}
+.background {
+  // width: 100vw;
+  // height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: flex-end;
+  // overflow: scroll;
+
+  .shadow {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 30vh;
+    background-image: linear-gradient(
+      rgba(121, 255, 57, 1),
+      rgba(121, 255, 57, 0)
+    );
+    z-index: 1;
+  }
+  .shadowBottom {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 3vh;
+    background-image: linear-gradient(
+      rgba(121, 255, 57, 0),
+      rgba(121, 255, 57, 1)
+    );
+    z-index: 1;
+  }
+
+  .timeline {
+    width: 302px;
+    height: 20px;
+
+    top: 3vh;
+
+
+    .timelineBar {
+      width: 100%;
+      height: 20px;
+      border: 1.76px solid #000000;
+      box-sizing: border-box;
+
+      margin-bottom: 17px;
+
+      .dip {
+        width: 19px;
+        height: 19px;
+
+        transform: translate(-2px, -2px);
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .chat {
+    width: 95.5vw;
+    display: flex;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    justify-content: flex-end;
+    position: relative;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    div {
+      width: auto;
+      overflow: scroll;
+
+      .chatBlock {
+        // display: flex;
+        // flex-direction: row;
+        // align-items: flex-end;
+        // justify-content: flex-start;
+        .userDip {
+          width: 41px;
+          height: 41px;
+          margin-right: 16px;
+        }
+
+        .phraseElements {
+          width: 66%;
+          height: auto;
+        }
+      }
+
+      .chatImage {
+        width: 495px;
+        height: 386px;
+        background: #ffffff;
+        border-radius: 30px 30px 30px 2px;
+        background-image: url();
+        background-size: cover;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .chatPhrase {
+        // background: #ffffff;
+        border-radius: 21px 21px 21px 2px;
+        padding: 14px 20px;
+        margin-top: 7px;
+        font-size: 20px;
+        line-height: 26px;
+        // letter-spacing: 0.01em;
+        // font-weight: normal;
+        // font-family: 'PT Root UI Regular';
+        // width: fit-content;
+        // -webkit-font-smoothing: antialiased;
+        // -moz-osx-font-smoothing: grayscale;
+        // float: left;
+        max-width: 650px;
+      }
+
+      .answerBlock {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-end;
+        /* flex-wrap: wrap; */
+        margin: 80px 0;
+
+        .answerElements {
+          // display: flex;
+          // flex-direction: row;
+          // align-items: flex-end;
+          // justify-content: flex-end;
+          // flex-wrap: wrap;
+          // width: 73%;
+
+          .answer {
+            float: right;
+            max-width: 680px;
+
+            .chatAnswer {
+              // float: right;
+              // font-family: 'PT Root UI Medium';
+
+              font-size: 41px;
+              // line-height: 131%;
+              // letter-spacing: 0.01em;
+              // text-align: left;
+              // background: #262626;
+              border-radius: 41px 41px 2px 41px;
+              padding: 20px 41px;
+              margin: 0 7px 7px 0;
+              // color: #ffffff;
+              // width: fit-content;
+              // -webkit-font-smoothing: antialiased;
+              // -moz-osx-font-smoothing: grayscale;
+
+
+            }
+          }
+        }
+        .userDip {
+          display: none;
+        }
+      }
+    }
+  }
+}
+}
