@@ -530,7 +530,6 @@
     },
     {
       position: 1,
-      image: '',
       type: 'ImageReplica',
       image: 'burger.jpg'
       }
@@ -569,7 +568,6 @@
       },
       {
         position: 1,
-        image: '',
         type: 'ImageReplica',
         image: 'kebab.jpg'
       }
@@ -606,7 +604,6 @@
       },
       {
         position: 1,
-        image: '',
         type: 'ImageReplica',
         image: 'meatball.jpg'
       }
@@ -641,7 +638,6 @@
     replicas:[
       {
         position: 0,
-        image: '',
         type: 'ImageReplica',
         image: 'bento.jpg'
       }
