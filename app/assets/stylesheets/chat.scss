@@ -25,6 +25,31 @@ body {
     z-index: 1;
   }
 
+
+  .share {
+    position: fixed;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    background-color: #79FF39;
+    background-image: url('./share.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 3vw;
+    top: 3vh;
+    border: 2px solid #000000;
+    box-sizing: border-box;
+    border-radius: 3px;
+
+    &:hover {
+      width: 144px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: 0.1s ease-in-out;
+
+    }
+  }
+
   .shadowBottom {
     position: fixed;
     bottom: 0;

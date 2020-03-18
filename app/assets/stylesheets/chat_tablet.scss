@@ -12,6 +12,15 @@
       )
     }
 
+    .share {
+      &:focus {
+        width: 144px;
+        border-radius: 100px;
+        cursor: pointer;
+        transition: 0.1s ease-in-out;
+      }
+    }
+
     .timeline {
       width: 302px;
       height: 20px;

@@ -13,6 +13,10 @@
       )
     }
 
+    .share {
+      display: none;
+    }
+
     .timeline {
       width: 242px;
       height: 16px;
@@ -25,7 +29,7 @@
 
       .timelineBar {
         height: 16px;
-        border: 1.4px solid #000000;
+        border: 1.47px solid #000000;
         margin-bottom: 17px;
 
         .dip {
