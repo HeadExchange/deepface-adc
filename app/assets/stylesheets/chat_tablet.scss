@@ -3,17 +3,7 @@
 
 @media screen and (min-width:375px) and (max-width:1024px){
 
-body {
-  background: pink;
-}
 .background {
-  // width: 100vw;
-  // height: 100vh;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: flex-end;
-  // overflow: scroll;
 
   .shadow {
     position: fixed;
@@ -41,9 +31,13 @@ body {
   .timeline {
     width: 302px;
     height: 20px;
-
     top: 3vh;
 
+
+    .timelineText p {
+      font-size: 14px;
+
+    }
 
     .timelineBar {
       width: 100%;
@@ -51,18 +45,14 @@ body {
       border: 1.76px solid #000000;
       box-sizing: border-box;
 
-      margin-bottom: 17px;
 
       .dip {
         width: 19px;
         height: 19px;
 
-        transform: translate(-2px, -2px);
+        transform: translate(-1px, -1px);
       }
 
-      p {
-        font-size: 13px;
-      }
     }
   }
 
@@ -171,7 +161,21 @@ body {
               // -webkit-font-smoothing: antialiased;
               // -moz-osx-font-smoothing: grayscale;
 
+              &:hover {
+                background: #ffffff;
+                color: #262626;
+                box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.85);
+                cursor: pointer;
+                transition: 0.12s ease-in-out;
+              }
 
+              &:focus {
+                background: #ffffff;
+                color: #262626;
+                box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.85);
+                cursor: pointer;
+                transition: 0.12s ease-in-out;
+              }
             }
           }
         }

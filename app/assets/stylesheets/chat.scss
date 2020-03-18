@@ -19,8 +19,8 @@ body {
     width: 100vw;
     height: 30vh;
     background-image: linear-gradient(
-      rgba(121, 255, 57, 1),
-      rgba(121, 255, 57, 0)
+      rgba(121, 255, 57, 1)50%,
+      rgba(121, 255, 57, 0)70%
     );
     z-index: 1;
   }
@@ -47,6 +47,11 @@ body {
     top: 3vh;
     z-index: 1;
 
+    .timelineText p {
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+
     .timelineBar {
       width: 100%;
       height: 23px;
@@ -54,7 +59,7 @@ body {
       box-sizing: border-box;
       background: #ffffff;
       border-radius: 100px;
-      margin-bottom: 9px;
+      margin-bottom: 19px;
 
       .dip {
         width: 21px;
@@ -184,7 +189,7 @@ body {
               &:hover {
                 background: #ffffff;
                 color: #262626;
-                box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.86);
+                box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
                 cursor: pointer;
                 transition: 0.12s ease-in-out;
               }
