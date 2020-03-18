@@ -491,7 +491,6 @@
       },
       {
         position: 1,
-        image: '',
         type: 'ImageReplica',
         image: 'alt.jpg'
       }
@@ -1086,8 +1085,9 @@ def create_replicas(step, replicas)
     replica.delete(:next_stage)
 
     if replica[:type] == "ImageReplica"
-      replica[:image] = upload_replica_image
-      r = step.image_replicas.create!(replica)
+      #replica[:image] = File.open(File.join(Rails.root, "public/autoupload/#{ replica[:image] }"))
+      image = File.open(File.join(Rails.root, "public/autoupload/#{ replica[:image] }"))
+      r = step.image_replicas.create!(image: replica[:image])
     else
       r = step.text_replicas.create!(replica)
     end
@@ -1125,17 +1125,14 @@ end
 def upload_replica_image
   uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
   uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "db/seed_images/*")).sample))
-  #uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
-#replica = step.replicas.find(params(image: replica[:image]))
-#uploader = ReplicaImageUploader.new(ImageReplica.new, image: replicas[:image])
-#uploader = ReplicaImageUploader.new(ImageReplica.find(replicas[:image]))
-#i = ImageReplica.find(params[:image])
 
-#replica =  Replica.find(params[:id])
-#image = File.open(Dir.glob(File.join(Rails.root, "/app/assets/images/#{i.image}")))
+  #replica = Replica.find_by_name(replica[:image])
+  #image.create!(File.open(File.join(Rails.root, "public/autoupload/#{ replica[:image] }")))
 
-#uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "/app/assets/images/#{image}"))))
-#uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "app/assets/images/#{image}"))))
+  #replicaImage = replica.images.create(image: image)
+
+
+  #uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "public/autoupload/#{ replica[:image] }")).sample))
 
   uploader
 end
