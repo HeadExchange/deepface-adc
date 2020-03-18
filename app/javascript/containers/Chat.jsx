@@ -50,7 +50,7 @@ export default class Chat extends React.Component {
           <div className="timelineBar">
             <div className="dip"></div>
           </div>
-          <div>
+          <div className="timelineText">
             <p>( to the end of the chat )</p>
             <p>🖤 Don't give up, stickers want to be yours, bro 🖤 </p>
           </div>
