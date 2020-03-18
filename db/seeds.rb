@@ -530,7 +530,6 @@
     },
     {
       position: 1,
-      image: '',
       type: 'ImageReplica',
       image: 'burger.jpg'
       }
@@ -569,7 +568,6 @@
       },
       {
         position: 1,
-        image: '',
         type: 'ImageReplica',
         image: 'kebab.jpg'
       }
@@ -606,7 +604,6 @@
       },
       {
         position: 1,
-        image: '',
         type: 'ImageReplica',
         image: 'meatball.jpg'
       }
@@ -641,7 +638,6 @@
     replicas:[
       {
         position: 0,
-        image: '',
         type: 'ImageReplica',
         image: 'bento.jpg'
       }
@@ -1127,15 +1123,20 @@ def create_next_steps
 end
 
 def upload_replica_image
+  uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
+  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "db/seed_images/*")).sample))
   #uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
-  #replica = step.replicas.find(params(image: replica[:image]))
-  #replica = Replica.find(params[type: 'ImageReplica'])
-  #uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
-  uploader = ReplicaImageUploader.new(ImageReplica.new, image: replica[:image])
-  #image == Replica.find(params(image: replica[:image]))
+#replica = step.replicas.find(params(image: replica[:image]))
+#uploader = ReplicaImageUploader.new(ImageReplica.new, image: replicas[:image])
+#uploader = ReplicaImageUploader.new(ImageReplica.find(replicas[:image]))
+#i = ImageReplica.find(params[:image])
 
-  #uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "/app/assets/images/#{replica[:image]}"))))
-  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "app/assets/images/#{image[:image]}"))))
+#replica =  Replica.find(params[:id])
+#image = File.open(Dir.glob(File.join(Rails.root, "/app/assets/images/#{i.image}")))
+
+#uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "/app/assets/images/#{image}"))))
+#uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "app/assets/images/#{image}"))))
+
   uploader
 end
 
