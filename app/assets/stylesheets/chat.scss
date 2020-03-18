@@ -19,11 +19,12 @@ body {
     width: 100vw;
     height: 30vh;
     background-image: linear-gradient(
-      rgba(121, 255, 57, 1)50%,
-      rgba(121, 255, 57, 0)70%
+      rgba(121, 255, 57, 1)55%,
+      rgba(121, 255, 57, 0)90%
     );
     z-index: 1;
   }
+
   .shadowBottom {
     position: fixed;
     bottom: 0;
