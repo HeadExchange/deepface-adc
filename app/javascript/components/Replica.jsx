@@ -34,7 +34,7 @@ export default class Replica extends React.Component {
           <div className="chatPhrase">
             <p>{phrase}</p>
           </div>
-        </div>
+       </div>
       )
     } else if (type == 'ImageReplica') {
       replica = (

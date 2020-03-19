@@ -1,0 +1,63 @@
+@import 'reset.scss';
+
+body {
+  background: #FF3951;
+}
+
+.background {
+  .shadow {
+    background-image: linear-gradient(
+      rgba(255, 57, 81, 1) 55%,
+      rgba(255, 57, 81, 0) 90%
+    );
+  }
+
+  .share {
+    background-color: #FF3951;
+  }
+
+  .answerBlock {
+    .answerElements {
+      .answer {
+        .chatAnswer {
+          &:hover {
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+            // transform: translate3d(0, 0, 0);
+            // perspective: 1000px;
+          }
+
+          @keyframes shake {
+            10%, 90% {
+              transform: translate3d(-1px, 0, 0);
+              transform: rotate(-4deg);
+              transform: scale(1.05)
+            }
+
+            20%, 80% {
+              transform: translate3d(2px, 0, 0);
+              transform: rotate(-6deg);
+              transform: scale(0.9)
+            }
+
+            30%, 50%, 70% {
+              transform: translate3d(-4px, 0, 0);
+              transform: rotate(-2deg);
+              transform: scale(0.5)
+            }
+
+            40%, 60% {
+              transform: translate3d(4px, 0, 0);
+               transform: rotate(6deg)
+            }
+
+            70%, 100% {
+              transform: translate3d(10px, 0, 0);
+               transform: rotate(0deg)
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

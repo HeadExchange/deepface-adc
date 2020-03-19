@@ -1,11 +1,14 @@
 @import 'reset.scss';
 @import 'fonts.scss';
+// @import 'effects/effect_answerFalse.scss';
+@import 'effects/effect_answerTrue.scss';
 @import 'chat_mobile.scss';
 @import 'chat_tablet.scss';
 
 body {
   background: #79ff39;
 }
+
 .background {
   width: 100vw;
   height: 100vh;
@@ -116,74 +119,113 @@ body {
     div {
       width: auto;
       overflow: scroll;
-
       .replicaBlock {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
-        &:first-child {
-          margin-top: 15vh;
-        }
 
-        .replicaElements {
-          .chatBlock {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            justify-content: flex-start;
-            margin-top: 10px;
+        .replicaBlock {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          &:first-child {
+            margin-top: 15vh;
+          }
 
-            &:first-child {
-              border-radius: 30px 30px 30px 2px;
-            }
+          .replicaElements {
+            .chatBlock {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+              justify-content: flex-start;
+              margin-top: 10px;
 
-            &:last-child {
-              border-radius: 2px 30px 30px 30px;
-            }
-            &:only-child {
-              border-radius: 30px 30px 30px 2px;
-            }
-            .phraseElements {
-              height: auto;
-              .chatPhrase {
-                background: #ffffff;
-                border-radius: 2px 30px 30px 2px;
-                padding: 16px 32px;
-                font-size: 32px;
-                line-height: 40px;
-                letter-spacing: 0.01em;
-                font-weight: normal;
-                font-family: 'PT Root UI Regular';
-                width: fit-content;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                float: left;
-                max-width: 918px;
+              &:first-child {
+                border-radius: 30px 30px 30px 2px;
+              }
+
+              &:last-child {
+                border-radius: 2px 30px 30px 30px;
+              }
+              &:only-child {
+                border-radius: 30px 30px 30px 2px;
+              }
+              .phraseElements {
+                height: auto;
+                .chatPhrase {
+                  background: #ffffff;
+                  border-radius: 2px 30px 30px 2px;
+                  padding: 16px 32px;
+                  font-size: 32px;
+                  line-height: 40px;
+                  letter-spacing: 0.01em;
+                  font-weight: normal;
+                  font-family: 'PT Root UI Regular';
+                  width: fit-content;
+                  -webkit-font-smoothing: antialiased;
+                  -moz-osx-font-smoothing: grayscale;
+                  float: left;
+                  max-width: 918px;
+                }
+              }
+              .userDip {
+                width: 45px;
+                height: 45px;
+                background: black;
+                border-radius: 100%;
+                margin-right: 21px;
+                background-image: url('./dip/dip.svg');
+                background-size: cover;
               }
             }
-            .userDip {
-              width: 45px;
-              height: 45px;
-              background: black;
-              border-radius: 100%;
-              margin-right: 21px;
-              background-image: url('./dip/dip.svg');
+            .chatImage {
+              width: 495px;
+              height: 386px;
+              background: #ffffff;
+              border-radius: 2px 30px 30px 2px;
+              background-image: url();
               background-size: cover;
+              display: flex;
+              align-items: center;
+
+              img {
+                width: 100%;
+              }
             }
           }
-          .chatImage {
-            width: 495px;
-            height: 386px;
-            background: #ffffff;
-            border-radius: 2px 30px 30px 2px;
-            background-image: url();
+
+          .userDip {
+            width: 45px;
+            height: 45px;
+            background: black;
+            border-radius: 100%;
+            margin-right: 21px;
+            background-image: url('./dip/dip.svg');
             background-size: cover;
+            margin-top: 10px;
             display: flex;
             align-items: center;
 
             img {
               width: 100%;
             }
+          }
+
+          .chatPhrase {
+            background: #ffffff;
+            border-radius: 30px 30px 30px 2px;
+            padding: 16px 32px;
+            margin-top: 10px;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: 0.01em;
+            font-weight: normal;
+            font-family: 'PT Root UI Regular';
+            width: fit-content;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            float: left;
+            max-width: 918px;
           }
         }
 
@@ -197,7 +239,6 @@ body {
           background-size: cover;
         }
       }
-
       .answerBlock {
         display: flex;
         flex-direction: row;
@@ -215,6 +256,10 @@ body {
 
           .answer {
             float: right;
+            width: fill;
+            height: fill;
+            background: pink;
+
             max-width: 973px;
 
             .chatAnswer {

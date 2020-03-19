@@ -13,7 +13,7 @@
     }
 
     .share {
-      &:focus {
+      &:active {
         width: 144px;
         border-radius: 100px;
         cursor: pointer;
@@ -71,6 +71,7 @@
           font-size: 20px;
           line-height: 26px;
           max-width: 650px;
+
         }
 
         .answerBlock {
@@ -91,7 +92,7 @@
                   box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.85);
                 }
 
-                &:focus {
+                &:active {
                   background: #ffffff;
                   color: #262626;
                   box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.85);
