@@ -1130,15 +1130,6 @@ end
 def upload_replica_image(filename)
   uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
   uploader.cache!(File.open(File.join(Rails.root, "public/autoupload/#{ filename }")))
-
-  #replica = Replica.find_by_name(replica[:image])
-  #image.create!(File.open(File.join(Rails.root, "public/autoupload/#{ replica[:image] }")))
-
-  #replicaImage = replica.images.create(image: image)
-
-
-  #uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "public/autoupload/#{ replica[:image] }")).sample))
-
   uploader
 end
 
