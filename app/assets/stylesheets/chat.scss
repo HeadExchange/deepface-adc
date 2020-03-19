@@ -1,7 +1,7 @@
 @import 'reset.scss';
 @import 'fonts.scss';
-
-//просто что-то чтобы код залился
+@import 'chat_mobile.scss';
+@import 'chat_tablet.scss';
 
 body {
   background: #79ff39;
@@ -73,9 +73,11 @@ body {
     top: 3vh;
     z-index: 1;
 
-    .timelineText p {
-      font-size: 15px;
-      margin-bottom: 5px;
+    .timelineText {
+      p {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
     }
 
     .timelineBar {
@@ -105,14 +107,8 @@ body {
     overflow: scroll;
     scroll-behavior: smooth;
     flex-direction: column;
-    /* align-items: flex-start; */
     justify-content: flex-end;
     position: relative;
-    /* bottom: 4vh; */
-
-    /*   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -ms-overflow-style: none; */
     ::-webkit-scrollbar {
       display: none;
     }
@@ -128,12 +124,43 @@ body {
         &:first-child {
           margin-top: 15vh;
         }
+
         .replicaElements {
           .chatBlock {
             display: flex;
             flex-direction: row;
             align-items: flex-end;
             justify-content: flex-start;
+            margin-top: 10px;
+
+            &:first-child {
+              border-radius: 30px 30px 30px 2px;
+            }
+
+            &:last-child {
+              border-radius: 2px 30px 30px 30px;
+            }
+            &:only-child {
+              border-radius: 30px 30px 30px 2px;
+            }
+            .phraseElements {
+              height: auto;
+              .chatPhrase {
+                background: #ffffff;
+                border-radius: 2px 30px 30px 2px;
+                padding: 16px 32px;
+                font-size: 32px;
+                line-height: 40px;
+                letter-spacing: 0.01em;
+                font-weight: normal;
+                font-family: 'PT Root UI Regular';
+                width: fit-content;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                float: left;
+                max-width: 918px;
+              }
+            }
             .userDip {
               width: 45px;
               height: 45px;
@@ -143,21 +170,14 @@ body {
               background-image: url('./dip/dip.svg');
               background-size: cover;
             }
-
-            .phraseElements {
-              /* width: 66%; */
-              height: auto;
-            }
           }
-
           .chatImage {
             width: 495px;
             height: 386px;
             background: #ffffff;
-            border-radius: 30px 30px 30px 2px;
+            border-radius: 2px 30px 30px 2px;
             background-image: url();
             background-size: cover;
-            margin-top: 10px;
             display: flex;
             align-items: center;
 
@@ -165,24 +185,8 @@ body {
               width: 100%;
             }
           }
-
-          .chatPhrase {
-            background: #ffffff;
-            border-radius: 30px 30px 30px 2px;
-            padding: 16px 32px;
-            margin-top: 10px;
-            font-size: 32px;
-            line-height: 40px;
-            letter-spacing: 0.01em;
-            font-weight: normal;
-            font-family: 'PT Root UI Regular';
-            width: fit-content;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            float: left;
-            max-width: 918px;
-          }
         }
+
         .userDip {
           width: 45px;
           height: 45px;
@@ -199,7 +203,6 @@ body {
         flex-direction: row;
         align-items: flex-end;
         justify-content: flex-end;
-        /* flex-wrap: wrap; */
         margin: 100px 0;
 
         .answerElements {
@@ -217,7 +220,6 @@ body {
             .chatAnswer {
               float: right;
               font-family: 'PT Root UI Medium';
-              // font-weight: 500;
               font-size: 64px;
               line-height: 131%;
               letter-spacing: 0.01em;
