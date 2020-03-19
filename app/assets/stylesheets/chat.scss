@@ -6,6 +6,7 @@
 body {
   background: #79ff39;
 }
+
 .background {
   width: 100vw;
   height: 100vh;
@@ -105,14 +106,9 @@ body {
     overflow: scroll;
     scroll-behavior: smooth;
     flex-direction: column;
-    /* align-items: flex-start; */
     justify-content: flex-end;
     position: relative;
-    /* bottom: 4vh; */
 
-    /*   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -ms-overflow-style: none; */
     ::-webkit-scrollbar {
       display: none;
     }
@@ -120,79 +116,82 @@ body {
     div {
       width: auto;
       overflow: scroll;
+    .replicaBlock {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
 
-      .replicaBlock {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        &:first-child {
-          margin-top: 15vh;
-        }
-        .replicaElements {
-          .chatBlock {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            justify-content: flex-start;
-            .userDip {
-              width: 45px;
-              height: 45px;
-              background: black;
-              border-radius: 100%;
-              margin-right: 21px;
-              background-image: url('./dip/dip.svg');
-              background-size: cover;
-            }
+      &:first-child {
+        margin-top: 20vh;
+      }
 
-            .phraseElements {
-              /* width: 66%; */
-              height: auto;
-            }
-          }
+      .replicaElements {
+        .chatBlock {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: flex-start;
 
-          .chatImage {
-            width: 495px;
-            height: 386px;
-            background: #ffffff;
-            border-radius: 30px 30px 30px 2px;
-            background-image: url();
+          .userDip {
+            width: 45px;
+            height: 45px;
+            background: black;
+            border-radius: 100%;
+            margin-right: 21px;
+            background-image: url('./dip/dip.svg');
             background-size: cover;
-            margin-top: 10px;
-            display: flex;
-            align-items: center;
-
-            img {
-              width: 100%;
-            }
           }
 
-          .chatPhrase {
-            background: #ffffff;
-            border-radius: 30px 30px 30px 2px;
-            padding: 16px 32px;
-            margin-top: 10px;
-            font-size: 32px;
-            line-height: 40px;
-            letter-spacing: 0.01em;
-            font-weight: normal;
-            font-family: 'PT Root UI Regular';
-            width: fit-content;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            float: left;
-            max-width: 918px;
+          .phraseElements {
+            // width: 66%;
+            height: auto;
           }
         }
-        .userDip {
-          width: 45px;
-          height: 45px;
-          background: black;
-          border-radius: 100%;
-          margin-right: 21px;
-          background-image: url('./dip/dip.svg');
+
+        .chatImage {
+          width: 495px;
+          height: 386px;
+          background: #ffffff;
+          border-radius: 30px 30px 30px 2px;
+          background-image: url();
           background-size: cover;
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .chatPhrase {
+          background: #ffffff;
+          border-radius: 30px 30px 30px 2px;
+          padding: 16px 32px;
+          margin-top: 10px;
+          font-size: 32px;
+          line-height: 40px;
+          letter-spacing: 0.01em;
+          font-weight: normal;
+          font-family: 'PT Root UI Regular';
+          width: fit-content;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          float: left;
+          max-width: 918px;
         }
       }
+
+      .userDip {
+        width: 45px;
+        height: 45px;
+        background: black;
+        border-radius: 100%;
+        margin-right: 21px;
+        background-image: url('./dip/dip.svg');
+        background-size: cover;
+      }
+    }
 
       // .chatBlockCounteiner .chatBlock:first-child .phraseElements .chatPhrase {
       //     border-radius: 30px 30px 30px 2px;
@@ -233,7 +232,6 @@ body {
             .chatAnswer {
               float: right;
               font-family: 'PT Root UI Medium';
-              // font-weight: 500;
               font-size: 64px;
               line-height: 131%;
               letter-spacing: 0.01em;
