@@ -227,6 +227,10 @@ body {
 
           .answer {
             float: right;
+            width: fill;
+            height: fill;
+            background: pink;
+
             max-width: 973px;
 
             .chatAnswer {
