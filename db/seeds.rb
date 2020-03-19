@@ -469,7 +469,7 @@
       },
       {
         position: 2,
-        image: '',
+        image: 'sticker_3.jpg',
         type: 'ImageReplica'
       }
     ],
@@ -1086,8 +1086,13 @@ def create_replicas(step, replicas)
 
     if replica[:type] == "ImageReplica"
       #replica[:image] = File.open(File.join(Rails.root, "public/autoupload/#{ replica[:image] }"))
-      image = File.open(File.join(Rails.root, "public/autoupload/#{ replica[:image] }"))
-      r = step.image_replicas.create!(image: replica[:image])
+      puts File.join(Rails.root, "public/autoupload/#{ replica[:image] }")
+      puts replica[:image]
+      puts replica
+      #image = File.open(File.join(Rails.root, "public/autoupload/#{ replica[:image] }"))
+      r = step.image_replicas.new(replica)
+      r.image = upload_replica_image(replica[:image])
+      r.save
     else
       r = step.text_replicas.create!(replica)
     end
@@ -1122,18 +1127,9 @@ def create_next_steps
   end
 end
 
-def upload_replica_image
+def upload_replica_image(filename)
   uploader = ReplicaImageUploader.new(ImageReplica.new, :image)
-  uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "db/seed_images/*")).sample))
-
-  #replica = Replica.find_by_name(replica[:image])
-  #image.create!(File.open(File.join(Rails.root, "public/autoupload/#{ replica[:image] }")))
-
-  #replicaImage = replica.images.create(image: image)
-
-
-  #uploader.cache!(File.open(Dir.glob(File.join(Rails.root, "public/autoupload/#{ replica[:image] }")).sample))
-
+  uploader.cache!(File.open(File.join(Rails.root, "public/autoupload/#{ filename }")))
   uploader
 end
 

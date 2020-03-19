@@ -31,18 +31,16 @@ export default class Replica extends React.Component {
     if (type == 'TextReplica') {
       replica = (
         <div className="chatBlock">
-          <div className="userDip"></div>
           <div className="phraseElements">
             <div className="chatPhrase">
               <p>{phrase}</p>
             </div>
           </div>
-        </div>
+       </div>
       )
     } else if (type == 'ImageReplica') {
       replica = (
         <div className="chatBlock">
-          <div className="userDip"></div>
           <div className="chatImage">
             <img src={image.url} width="100" />
           </div>
