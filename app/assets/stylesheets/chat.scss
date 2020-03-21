@@ -1,5 +1,6 @@
 @import 'reset.scss';
 @import 'fonts.scss';
+@import 'mixins.scss';
 @import 'chat_mobile.scss';
 @import 'chat_tablet.scss';
 @import 'effects/effect_answer_true.scss';
@@ -8,6 +9,7 @@
 
 body {
   background: #79ff39;
+  cursor: url('./cursors/#{$nth}'), auto;
 }
 
 .background {
@@ -50,7 +52,7 @@ body {
     &:hover {
       width: 144px;
       border-radius: 100px;
-      cursor: pointer;
+      /* cursor: url('./cursors/#{$pnt}'), auto; */
       transition: 0.1s ease-in-out;
     }
   }
@@ -241,7 +243,8 @@ body {
                 background: #ffffff;
                 color: #262626;
                 box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
-                cursor: pointer;
+                /* cursor: url('./cursors/#{$pnt}.svg'), pointer; */
+                /* cursor: url('./cursors/#{$png}'), auto; */
                 transition: 0.12s ease-in-out;
               }
             }

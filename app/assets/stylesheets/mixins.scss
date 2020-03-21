@@ -1,0 +1,24 @@
+/* $imgKey: random(3); */
+
+$list: ('cursor_hand', 'cursor_rock', 'cursor_yo');
+$list2: ('cursor_fuck', 'cursor_pointer');
+$list3: ('cursor1', 'cursor2', 'cursor3', 'cursor4', 'cursor5');
+$nth: nth($list, random(3));
+$pnt: nth($list2, random(2));
+$png: nth($list3, random(5));
+
+/* .cursor {
+  width: 5rem;
+  height: 5rem;
+  background-image: url(./cursors/#{$png});
+  background-size: cover;
+  position: absolute;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+
+.pointer {
+  transform: scale(2);
+  background-image: url(./cursors/#{$pnt});
+}
+ */

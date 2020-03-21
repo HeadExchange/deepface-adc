@@ -4,8 +4,6 @@ import ReactDOM from 'react-dom'
 import Chat from '../containers/Chat'
 
 document.addEventListener('DOMContentLoaded', () => {
-  // const data = JSON.parse(document.getElementById('data').dataset.props)
-
   let step
   let div
   div = document.createElement('div')

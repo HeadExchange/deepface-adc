@@ -13,10 +13,11 @@ export default class Answer extends React.Component {
 
   effectClick() {
     const { effect } = this.props
+    console.log(effect)
     if (effect == 'wrongAnswer') {
-      document.getElementsByTagName('body').classList.add('wrongAnswer')
+      document.querySelector('body').classList.add('wrongAnswer')
     } else if (effect == 'dip_rain') {
-      document.getElementsByClassName('dipRain').classList.remove('hidden')
+      document.querySelector('dipRain').classList.remove('hidden')
     }
   }
 
