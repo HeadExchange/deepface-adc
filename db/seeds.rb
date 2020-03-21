@@ -379,7 +379,7 @@
       },{
         position: 0,
         phrase: 'Figma',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 8
       }
     ]
@@ -397,7 +397,7 @@
       {
         position: 0,
         phrase: 'HTML',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 9
       },{
         position: 0,
@@ -420,7 +420,7 @@
       {
         position: 0,
         phrase: 'GUI',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 10
       },{
         position: 0,
@@ -504,17 +504,17 @@
       },{
         position: 0,
         phrase: 'Cmd burger',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 13
       },{
         position: 0,
         phrase: 'Ctrl burger',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 13
       },{
         position: 0,
         phrase: 'Shift burger',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 13
       }
     ]
@@ -537,7 +537,7 @@
       {
         position: 0,
         phrase: 'Сендвич',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 14
       },{
         position: 0,
@@ -547,12 +547,12 @@
       },{
         position: 0,
         phrase: 'Капкейк',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 14
       },{
         position: 0,
         phrase: 'Пирожок',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 14
       }
     ]
@@ -575,7 +575,7 @@
       {
         position: 0,
         phrase: 'Митбол',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 15
       },{
         position: 0,
@@ -585,7 +585,7 @@
       },{
         position: 0,
         phrase: 'Онигири',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 15
       }
     ]
@@ -611,7 +611,7 @@
       {
         position: 0,
         phrase: 'Кебаб',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 16
       },{
         position: 0,
@@ -621,12 +621,12 @@
       },{
         position: 0,
         phrase: 'Шарики',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 16
       },{
         position: 0,
         phrase: 'Бенто',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 16
       }
     ]
@@ -650,7 +650,7 @@
       },{
         position: 0,
         phrase: 'Онигири',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 17
       },{
         position: 0,
@@ -679,17 +679,17 @@
       {
         position: 0,
         phrase: 'jpg',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 18
       },{
         position: 0,
         phrase: 'svg',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 18
       },{
         position: 0,
         phrase: 'tiff',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 18
       },{
         position: 0,
@@ -699,7 +699,7 @@
       },{
         position: 0,
         phrase: 'gif',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 18
       }
     ]
@@ -729,7 +729,7 @@
       },{
         position: 0,
         phrase: 'Иконка',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 20
       }
     ]
@@ -818,7 +818,7 @@
       {
         position: 0,
         phrase: 'flex-start',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 23
       },{
         position: 0,
@@ -828,7 +828,7 @@
       },{
         position: 0,
         phrase: 'space-around',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 23
       }
     ]

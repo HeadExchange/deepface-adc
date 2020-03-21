@@ -4,25 +4,30 @@ export default class Answer extends React.Component {
   constructor(props) {
     super(props)
     this.handleAnswerClick = this.handleAnswerClick.bind(this)
+    this.effectClick = this.effectClick.bind(this)
   }
 
   handleAnswerClick(id) {
     this.props.handleAnswerClick(id)
-    // if ((this.onClick = true)) {
-    //   this.props.handleAnswerClick(id)
-    // } else {
-    //   this.props.delete()
-    // }
+  }
+
+  effectClick() {
+    const { effect } = this.props
+    if (effect == 'wrongAnswer') {
+      document.getElementsByTagName('body').classList.add('wrongAnswer')
+    }
   }
 
   render() {
     const { handleAnswerClick } = this
+    const { effectClick } = this
     const { id, phrase } = this.props
 
     return (
       <div
         onClick={function() {
           handleAnswerClick(id)
+          effectClick()
         }}
         id="question"
       >

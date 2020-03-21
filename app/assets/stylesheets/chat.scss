@@ -175,10 +175,9 @@ body {
           }
           .chatImage {
             width: 495px;
-            height: 386px;
+            height: auto;
             background: #ffffff;
-            border-radius: 2px 30px 30px 2px;
-            background-image: url();
+            border-radius: 2px 40px 40px 40px;
             background-size: cover;
             display: flex;
             align-items: center;
