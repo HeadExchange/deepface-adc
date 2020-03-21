@@ -44,7 +44,24 @@ export default class Chat extends React.Component {
     })
 
     return (
-      <div className="background">
+      <div>
+        <div className="background">
+          <div className="shadow"></div>
+          <div className="share"></div>
+          <section className="timeline">
+            <div className="timelineBar">
+              <div className="dip"></div>
+            </div>
+            <div className="timelineText">
+              <p>( to the end of the chat )</p>
+              <p>🖤 Don't give up, stickers want to be yours, bro 🖤 </p>
+            </div>
+          </section>
+
+          <section className="chat">
+            <div>{steps}</div>
+          </section>
+        </div>
         <div className="dipRain hidden">
           <div className="y">
             <div className="dipWhite">
@@ -92,21 +109,6 @@ export default class Chat extends React.Component {
             </div>
           </div>
         </div>
-        <div className="shadow"></div>
-        <div className="share"></div>
-        <section className="timeline">
-          <div className="timelineBar">
-            <div className="dip"></div>
-          </div>
-          <div className="timelineText">
-            <p>( to the end of the chat )</p>
-            <p>🖤 Don't give up, stickers want to be yours, bro 🖤 </p>
-          </div>
-        </section>
-
-        <section className="chat">
-          <div>{steps}</div>
-        </section>
       </div>
     )
   }

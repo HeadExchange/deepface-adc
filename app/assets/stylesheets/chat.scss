@@ -9,10 +9,9 @@
 body {
   background: #79ff39;
 }
-.hidden {
-  /* display: none; */
-}
+
 .background {
+  /* filter: blur(4px); */
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -256,6 +255,139 @@ body {
           margin: 0 0 10px 21px;
         }
       }
+    }
+  }
+}
+
+//стили дипрейна
+
+.dipRain {
+  &.hidden {
+    display: none;
+  }
+  width: 100vw;
+  height: 1025px;
+  z-index: 3;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: absolute;
+  top: -236px;
+  overflow: hidden;
+  filter: blur(4px);
+
+  .y {
+    .dipWhite {
+      -webkit-animation: y 2s linear infinite;
+      animation: y 2s linear infinite;
+      .x {
+        background-image: url('./effects/diprain/white_dip.svg');
+        background-size: cover;
+        width: 236px;
+        height: 236px;
+        -webkit-animation: x 8s linear infinite alternate;
+        animation: x 8s linear infinite alternate;
+      }
+      &.dipWhiteSecond {
+        .x {
+          -webkit-animation: x 6s linear infinite alternate;
+          animation: x 6s linear infinite alternate;
+        }
+      }
+      &.dipWhiteThird {
+        .x {
+          -webkit-animation: x 4s linear infinite alternate;
+          animation: x 4s linear infinite alternate;
+        }
+      }
+    }
+    .dipGreen {
+      -webkit-animation: y 3s linear infinite;
+      animation: y 3s linear infinite;
+      .x {
+        background-image: url('./effects/diprain/green_dip.svg');
+        background-size: cover;
+        width: 236px;
+        height: 236px;
+        -webkit-animation: x 4s linear infinite alternate;
+        animation: x 4s linear infinite alternate;
+      }
+      &.dipGreenSecond {
+        .x {
+          -webkit-animation: x 7s linear infinite alternate;
+          animation: x 7s linear infinite alternate;
+        }
+      }
+      &.dipGreenThird {
+        .x {
+          -webkit-animation: x 9s linear infinite alternate;
+          animation: x 9s linear infinite alternate;
+        }
+      }
+    }
+    .dipBlack {
+      -webkit-animation: y 4s linear infinite;
+      animation: y 4s linear infinite;
+      .x {
+        background-image: url('./effects/diprain/black_dip.svg');
+        background-size: cover;
+        width: 236px;
+        height: 236px;
+        -webkit-animation: x 3s linear infinite alternate;
+        animation: x 3s linear infinite alternate;
+      }
+      &.dipBlackSecond {
+        .x {
+          -webkit-animation: x 4s linear infinite alternate;
+          animation: x 4s linear infinite alternate;
+        }
+      }
+      &.dipBlackThird {
+        .x {
+          -webkit-animation: x 5s linear infinite alternate;
+          animation: x 5s linear infinite alternate;
+        }
+      }
+    }
+  }
+  @-webkit-keyframes y {
+    50% {
+      opacity: 100%;
+    }
+    100% {
+      -webkit-transform: translateY(calc(100vw - 739px));
+      transform: translateY(calc(100vw - 739px));
+      opacity: 0%;
+    }
+  }
+  @keyframes y {
+    80% {
+      opacity: 100%;
+    }
+    100% {
+      -webkit-transform: translateY(calc(100vw - 739px));
+      transform: translateY(calc(100vw - 739px));
+      opacity: 0%;
+    }
+  }
+  @-webkit-keyframes x {
+    80% {
+      opacity: 100%;
+    }
+    100% {
+      -webkit-transform: translateX(calc(100vh - 739px));
+      transform: translateX(calc(100vh - 739px));
+      opacity: 0%;
+    }
+  }
+  @keyframes x {
+    80% {
+      opacity: 100%;
+    }
+    100% {
+      -webkit-transform: translateX(calc(100vh - 739px));
+      transform: translateX(calc(100vh - 739px));
+      opacity: 0%;
     }
   }
 }

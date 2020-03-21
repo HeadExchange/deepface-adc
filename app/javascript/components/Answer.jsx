@@ -15,6 +15,8 @@ export default class Answer extends React.Component {
     const { effect } = this.props
     if (effect == 'wrongAnswer') {
       document.getElementsByTagName('body').classList.add('wrongAnswer')
+    } else if (effect == 'dip_rain') {
+      document.getElementsByClassName('dipRain').classList.remove('hidden')
     }
   }
 

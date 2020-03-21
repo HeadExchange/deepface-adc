@@ -220,7 +220,8 @@
       {
         position: 0,
         phrase: 'Супер',
-        next_stage: 5
+        next_stage: 5,
+        effect: 'dip_rain'
       }
     ]
   },{
@@ -237,7 +238,8 @@
       {
         position: 0,
         phrase: 'Лол',
-        next_stage: 5
+        next_stage: 5,
+        effect: 'dip_rain'
       }
     ]
   },{
@@ -262,7 +264,8 @@
       {
         position: 0,
         phrase: 'Окей',
-        next_stage: 5
+        next_stage: 5,
+        effect: 'dip_rain'
       }
     ]
   },{
@@ -292,7 +295,8 @@
       {
         position: 0,
         phrase: 'Супер',
-        next_stage: 5
+        next_stage: 5,
+        effect: 'dip_rain'
       }
     ]
   },{
