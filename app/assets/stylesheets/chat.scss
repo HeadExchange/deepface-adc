@@ -2,11 +2,15 @@
 @import 'fonts.scss';
 @import 'chat_mobile.scss';
 @import 'chat_tablet.scss';
-@import 'effects/effect_answerTrue.scss';
-/* @import 'effects/effect_answerFalse.scss'; */
+@import 'effects/effect_answer_true.scss';
+@import 'effects/effect_answer_false.scss';
+@import 'effects/dip_rain.scss';
 
 body {
   background: #79ff39;
+}
+.hidden {
+  /* display: none; */
 }
 .background {
   width: 100vw;

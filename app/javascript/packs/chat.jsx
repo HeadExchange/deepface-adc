@@ -19,10 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log(myJson)
       step = myJson
 
-      ReactDOM.render(
-        <Chat step={step} />,
-        // document.body.appendChild(document.createElement('div'))
-        document.body.appendChild(div)
-      )
+      ReactDOM.render(<Chat step={step} />, document.body.appendChild(div))
     })
 })

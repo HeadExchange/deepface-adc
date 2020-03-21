@@ -29,7 +29,7 @@
       },{
         position: 0,
         phrase: 'Нет',
-        next_stage: 3
+        next_stage: 4
       }
     ]
   },{
@@ -54,7 +54,7 @@
       },{
         position: 0,
         phrase: 'Нет',
-        next_stage: 3
+        next_stage: 4
       }
     ]
   },{
@@ -83,7 +83,7 @@
       },{
         position: 0,
         phrase: 'Ты меня с кем-то путаешь',
-        next_stage: 3
+        next_stage: 4
       }
     ]
   },{
@@ -111,7 +111,7 @@
       },{
         position: 0,
         phrase: 'ЭЭЭ, ЧТО?',
-        next_stage: 3
+        next_stage: 4
       }
     ]
   },{
@@ -213,7 +213,14 @@
       },
       {
         position: 1,
-        phrase: 'Маскот кафедры «Дизайн и программированеие», знаешь что такое?'
+        phrase: 'Маскот кафедры «Дизайн и программированеие»!'
+      }
+    ],
+    answers: [
+      {
+        position: 0,
+        phrase: 'Супер',
+        next_stage: 5
       }
     ]
   },{
@@ -224,6 +231,13 @@
       {
         position: 0,
         phrase: 'Я чёрный круг с ромбом вместо глаза, неужели не видно?'
+      }
+    ],
+    answers: [
+      {
+        position: 0,
+        phrase: 'Лол',
+        next_stage: 5
       }
     ]
   },{
@@ -242,6 +256,13 @@
       {
         position: 2,
         phrase: 'Я видел только миллион своих клонов, а потом всё потемнело. Очнулся уже здесь, на сайте. Тут немного одиноко, поэтому давай поболтаем?'
+      }
+    ],
+    answers: [
+      {
+        position: 0,
+        phrase: 'Окей',
+        next_stage: 5
       }
     ]
   },{
@@ -265,6 +286,13 @@
       },{
         position: 4,
         phrase: '))))+'
+      }
+    ],
+    answers: [
+      {
+        position: 0,
+        phrase: 'Супер',
+        next_stage: 5
       }
     ]
   },{

@@ -45,18 +45,64 @@ export default class Chat extends React.Component {
 
     return (
       <div className="background">
-
+        <div className="dipRain hidden">
+          <div className="y">
+            <div className="dipWhite">
+              <div className="x"></div>
+            </div>
+          </div>
+          <div className="y">
+            <div className="dipGreen">
+              <div className="x"></div>
+            </div>
+          </div>
+          <div className="y">
+            <div className="dipBlack">
+              <div className="x"></div>
+            </div>
+          </div>
+          <div className="y">
+            <div className="dipWhite dipWhiteSecond">
+              <div className="x"></div>
+            </div>
+          </div>
+          <div className="y">
+            <div className="dipGreen dipGreenSecond">
+              <div className="x"></div>
+            </div>
+          </div>
+          <div className="y">
+            <div className="dipBlack dipBlackSecond">
+              <div className="x"></div>
+            </div>
+          </div>
+          <div className="y">
+            <div className="dipWhite dipWhiteThird">
+              <div className="x"></div>
+            </div>
+          </div>
+          <div className="y">
+            <div className="dipGreen dipGreenThird">
+              <div className="x"></div>
+            </div>
+          </div>
+          <div className="y">
+            <div className="dipBlack dipBlackThird">
+              <div className="x"></div>
+            </div>
+          </div>
+        </div>
         <div className="shadow"></div>
-          <div className="share"></div>
-          <section className="timeline">
-            <div className="timelineBar">
-              <div className="dip"></div>
-            </div>
-            <div className="timelineText">
-              <p>( to the end of the chat )</p>
-              <p>🖤 Don't give up, stickers want to be yours, bro 🖤 </p>
-            </div>
-          </section>
+        <div className="share"></div>
+        <section className="timeline">
+          <div className="timelineBar">
+            <div className="dip"></div>
+          </div>
+          <div className="timelineText">
+            <p>( to the end of the chat )</p>
+            <p>🖤 Don't give up, stickers want to be yours, bro 🖤 </p>
+          </div>
+        </section>
 
         <section className="chat">
           <div>{steps}</div>
