@@ -41,7 +41,49 @@
 
     .chat {
       div {
-        .chatBlock {
+        .replicaBlock {
+          &:first-child {
+            margin-top: 0;
+          }
+          .replicaElements {
+            .chatBlock {
+              margin-top: 5px;
+
+              &:first-child {
+                border-radius: 21px 21px 21px 2px;
+                margin-top: 0px;
+              }
+
+              &:last-child {
+                border-radius: 2px 21px 21px 21px;
+              }
+              &:only-child {
+                border-radius: 21px 21px 21px 21px;
+              }
+
+              .phraseElements {
+                .chatPhrase {
+                  border-radius: 2px 21px 21px 2px;
+                  padding: 14px 20px;
+                  font-size: 20px;
+                  line-height: 26px;
+                  max-width: 650px;
+                }
+              }
+              .userDip {
+                width: 34px;
+                height: 34px;
+                margin-right: 16px;
+              }
+            }
+
+            .chatImage {
+              width: 356px;
+              border-radius: 21px 21px 21px 2px;
+              margin-top: 7px;
+            }
+          }
+
           .userDip {
             width: 34px;
             height: 34px;
@@ -49,44 +91,32 @@
           }
         }
 
-        .chatImage {
-          width: 356px;
-          border-radius: 21px 21px 21px 2px;
-          margin-top: 7px;
-        }
-
-        .chatPhrase {
-          border-radius: 21px 21px 21px 2px;
-          padding: 14px 20px;
-          margin-top: 7px;
-          font-size: 20px;
-          line-height: 26px;
-          max-width: 650px;
-        }
 
         .answerBlock {
-          margin: 80px 0;
-
+          margin: 80px 0 75px 0;
           .answerElements {
-            .answer {
-              max-width: 680px;
+            #question {
 
-              .chatAnswer {
-                font-size: 41px;
-                border-radius: 41px 41px 2px 41px;
-                padding: 20px 41px;
-                margin: 0 7px 7px 0;
+              .answer {
+                max-width: 680px;
 
-                &:hover {
-                  box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.85);
-                }
+                .chatAnswer {
+                  font-size: 41px;
+                  border-radius: 41px 41px 2px 41px;
+                  padding: 20px 41px;
+                  margin: 0 7px 7px 0;
 
-                &:active {
-                  background: #ffffff;
-                  color: #262626;
-                  box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.85);
-                  // cursor: pointer;
-                  transition: 0.12s ease-in-out;
+                  &:hover {
+                    box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.85);
+                  }
+
+                  &:active {
+                    background: #ffffff;
+                    color: #262626;
+                    box-shadow: 3px 3px 15px rgba(255, 255, 255, 0.85);
+                    // cursor: pointer;
+                    transition: 0.12s ease-in-out;
+                  }
                 }
               }
             }

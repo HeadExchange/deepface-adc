@@ -28,7 +28,7 @@ body {
     width: 100vw;
     height: 20vh;
     background-image: linear-gradient(
-      rgba(121, 255, 57, 1) 71%,
+      rgba(121, 255, 57, 1) 72%,
       rgba(121, 255, 57, 0) 90%
     );
     z-index: 1;
@@ -80,11 +80,9 @@ body {
     top: 3vh;
     z-index: 1;
 
-    .timelineText {
-      p {
+    .timelineText p {
         font-size: 15px;
         margin-bottom: 5px;
-      }
     }
 
     .timelineBar {
@@ -148,7 +146,7 @@ body {
               border-radius: 2px 30px 30px 30px;
             }
             &:only-child {
-              border-radius: 30px 30px 30px 2px;
+              border-radius: 30px 30px 30px 30px;
             }
             .phraseElements {
               height: auto;
@@ -182,7 +180,7 @@ body {
             width: 495px;
             height: auto;
             background: #ffffff;
-            border-radius: 2px 40px 40px 40px;
+            border-radius: 40px 40px 40px 2px;
             background-size: cover;
             display: flex;
             align-items: center;
@@ -203,6 +201,8 @@ body {
           background-size: cover;
         }
       }
+
+
 
       .answerBlock {
         display: flex;
@@ -262,7 +262,7 @@ body {
           height: 45px;
           background: black;
           border-radius: 100%;
-          margin: 0 0 10px 21px;
+          margin: 0 0 10px 11px;
         }
       }
     }
