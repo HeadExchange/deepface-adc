@@ -41,6 +41,9 @@
     .chat {
       div {
         .replicaBlock {
+          &:first-child {
+            margin-top: 0;
+          }
           .replicaElements {
             .chatBlock {
               .phraseElements {
