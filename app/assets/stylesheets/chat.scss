@@ -129,7 +129,7 @@ body {
         flex-direction: row;
         align-items: flex-end;
         &:first-child {
-          margin-top: 18vh;
+          margin-top: calc(15vh - 10px);
         }
 
         .replicaElements {
