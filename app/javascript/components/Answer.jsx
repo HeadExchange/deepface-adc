@@ -9,6 +9,13 @@ export default class Answer extends React.Component {
 
   handleAnswerClick(id) {
     this.props.handleAnswerClick(id)
+    this.autoScroll()
+  }
+
+  autoScroll() {
+    document.querySelector('.chatAnswer').scrollIntoView({
+      behavior: 'smooth'
+    })
   }
 
   effectClick() {
@@ -23,7 +30,7 @@ export default class Answer extends React.Component {
 
   render() {
     const { handleAnswerClick } = this
-    const { effectClick } = this
+    const { effectClick, autoScroll } = this
     const { id, phrase } = this.props
 
     return (
