@@ -210,7 +210,7 @@ body {
         align-items: flex-end;
         justify-content: flex-end;
         margin: 100px 0;
-
+        overflow: visible;
         .answerElements {
           display: flex;
           flex-direction: row;
@@ -218,34 +218,41 @@ body {
           justify-content: flex-end;
           flex-wrap: wrap;
           width: 73%;
+          overflow: visible;
 
-          .answer {
-            float: right;
-            max-width: 973px;
+          #question {
+            overflow: visible;
 
-            .chatAnswer {
+            .answer {
               float: right;
-              font-family: 'PT Root UI Medium';
-              font-size: 64px;
-              line-height: 131%;
-              letter-spacing: 0.01em;
-              text-align: left;
-              background: #262626;
-              border-radius: 60px 60px 4px 60px;
-              padding: 32px 64px;
-              margin: 0 10px 10px 0;
-              color: #ffffff;
-              width: fit-content;
-              -webkit-font-smoothing: antialiased;
-              -moz-osx-font-smoothing: grayscale;
+              max-width: 973px;
+              overflow: visible;
 
-              &:hover {
-                background: #ffffff;
-                color: #262626;
-                box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
-                /* cursor: url('./cursors/#{$pnt}.svg'), pointer; */
-                /* cursor: url('./cursors/#{$png}'), auto; */
-                transition: 0.12s ease-in-out;
+              .chatAnswer {
+                float: right;
+                font-family: 'PT Root UI Medium';
+                font-size: 64px;
+                line-height: 131%;
+                letter-spacing: 0.01em;
+                text-align: left;
+                background: #262626;
+                border-radius: 60px 60px 4px 60px;
+                padding: 32px 64px;
+                margin: 0 10px 10px 0;
+                color: #ffffff;
+                width: fit-content;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                overflow: visible;
+
+                &:hover {
+                  background: #ffffff;
+                  color: #262626;
+                  box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
+                  /* cursor: url('./cursors/#{$pnt}.svg'), pointer; */
+                  /* cursor: url('./cursors/#{$png}'), auto; */
+                  transition: 0.12s ease-in-out;
+                }
               }
             }
           }
@@ -401,7 +408,7 @@ body {
 
 .dipConfetti {
   &.hidden {
-    /* display: none; */
+    display: none;
   }
   width: 80vw;
   height: 1025px;
