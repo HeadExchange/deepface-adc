@@ -21,6 +21,11 @@ export default class Step extends React.Component {
         <Answer {...answer} handleAnswerClick={handleAnswerClick} key={i} />
       )
     })
+    answerElements.forEach(autoScroll => {
+      document.querySelector('body').scrollIntoView({
+        behavior: 'smooth'
+      })
+    })
 
     return (
       <div>

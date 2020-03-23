@@ -10,12 +10,21 @@ export default class Answer extends React.Component {
   handleAnswerClick(id) {
     this.props.handleAnswerClick(id)
     // this.autoScroll()
+
+    // answers.map((answer, id) => {
+    //     if (id !== 'question') {
+    //       document.querySelector('.chatAnswer').remove()
+    //     }
+    //   })
   }
 
   autoScroll() {
-    document.querySelector('.chatAnswer').scrollIntoView({
-      behavior: 'smooth'
-    })
+    // let
+    // document.querySelector('.chatAnswer').forEach(id => {
+    //   document.querySelector('.chatAnswer').scrollIntoView({
+    //     behavior: 'smooth'
+    //   })
+    // })
   }
 
   effectClick(effect) {
@@ -24,12 +33,12 @@ export default class Answer extends React.Component {
       document.querySelector('body').classList.add('wrongAnswer')
       window.setTimeout(() => {
         document.querySelector('body').classList.remove('wrongAnswer')
-      }, 3500)
+      }, 1500)
     } else if (effect == 'trueAnswer') {
       document.querySelector('body').classList.add('trueAnswer')
       window.setTimeout(() => {
-        document.querySelector('body').classList.remove('wrongAnswer')
-      }, 3500)
+        document.querySelector('body').classList.remove('trueAnswer')
+      }, 1500)
     } else if (effect == 'dipRain') {
       document.querySelector('.dipRain').classList.remove('hidden')
       window.setTimeout(() => {
@@ -51,7 +60,7 @@ export default class Answer extends React.Component {
   render() {
     const { handleAnswerClick } = this
     const { effectClick, autoScroll } = this
-    const { id, phrase, effect } = this.props
+    const { id, phrase, effect, answers } = this.props
 
     return (
       <div
