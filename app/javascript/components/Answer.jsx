@@ -5,6 +5,7 @@ export default class Answer extends React.Component {
     super(props)
     this.handleAnswerClick = this.handleAnswerClick.bind(this)
     this.effectClick = this.effectClick.bind(this)
+    this.cursorEffect = this.cursorEffect.bind(this)
   }
 
   handleAnswerClick(id) {
@@ -25,6 +26,17 @@ export default class Answer extends React.Component {
     //     behavior: 'smooth'
     //   })
     // })
+  }
+
+  cursorEffect() {
+    const cursor = document.querySelector('.cursor')
+
+    document.addEventListener('mousemove', e => {
+      cursor.setAttribute(
+        'style',
+        'top: ' + (e.pageY - 20) + 'px; left: ' + (e.pageX - 20) + 'px;'
+      )
+    })
   }
 
   effectClick(effect) {
@@ -50,17 +62,18 @@ export default class Answer extends React.Component {
         document.querySelector('.dipConfetti').classList.add('hidden')
       }, 3500)
     } else if (effect == 'bigCursor') {
-      document.querySelector('.bigCursor').classList.remove('hidden')
+      document.querySelector('.cursor').classList.add('bigCursor')
       window.setTimeout(() => {
-        document.querySelector('.bigCursor').classList.add('hidden')
-      }, 3500)
+        document.querySelector('.cursor').classList.remove('bigCursor')
+      }, 2000)
     }
   }
 
   render() {
     const { handleAnswerClick } = this
-    const { effectClick, autoScroll } = this
+    const { effectClick, autoScroll, cursor, cursorEffect } = this
     const { id, phrase, effect, answers } = this.props
+    cursorEffect()
 
     return (
       <div

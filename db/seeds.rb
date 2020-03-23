@@ -314,15 +314,18 @@
       {
         position: 0,
         phrase: 'Дизайнер',
-        next_stage: 12
+        next_stage: 12,
+        effect: 'bigCursor'
       },{
         position: 0,
         phrase: 'Прогер',
-        next_stage: 21
+        next_stage: 21,
+        effect: 'bigCursor'
       },{
         position: 0,
         phrase: '???',
-        next_stage: 6
+        next_stage: 6,
+        effect: 'bigCursor'
       }
     ]
   },{

@@ -7,9 +7,45 @@
 @import 'effects/effect_answer_false.scss';
 @import 'effects/dip_rain.scss';
 
+.cursor {
+  /* background-image: url('./cursors/cursor3.png'); */
+  background-image: url('./cursors/#{$nth}');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  z-index: 10;
+  transition-duration: 100ms;
+  transition-timing-function: ease-out;
+}
+.bigCursor {
+  animation: cursorAnimation 1s infinite alternate;
+}
+
+@-webkit-keyframes cursorAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(5);
+  }
+}
+
+@keyframes cursorAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(5);
+  }
+}
+
 body {
   background: #79ff39;
-  cursor: url('./cursors/#{$nth}'), auto;
+  /* cursor: url('./cursors/#{$nth}'), auto; */
+  cursor: none;
+  /* cursor: auto; */
 }
 
 .background {
