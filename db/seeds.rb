@@ -442,7 +442,7 @@
       },{
         position: 0,
         phrase: 'Photoshop',
-        effect: 'bigCursor'
+        effect: 'bigCursor',
         next_stage: 9
       }
     ]
@@ -465,7 +465,7 @@
       },{
         position: 0,
         phrase: 'TUI',
-        effect: 'dipConfetti'
+        effect: 'dipConfetti',
         next_stage: 10
       }
     ]
@@ -540,7 +540,7 @@
       {
         position: 0,
         phrase: 'Alt burger',
-        effect: 'trueAnswer'
+        effect: 'trueAnswer',
         next_stage: 13
       },{
         position: 0,
@@ -583,7 +583,7 @@
       },{
         position: 0,
         phrase: 'Гамбургер',
-        effect: 'dipConfetti'
+        effect: 'dipConfetti',
         next_stage: 14
       },{
         position: 0,
@@ -621,7 +621,7 @@
       },{
         position: 0,
         phrase: 'Кебаб',
-        effect: 'trueAnswer'
+        effect: 'trueAnswer',
         next_stage: 15
       },{
         position: 0,
@@ -657,7 +657,7 @@
       },{
         position: 0,
         phrase: 'Шашлык',
-        effect: 'dipRain'
+        effect: 'dipRain',
         next_stage: 16
       },{
         position: 0,
@@ -686,7 +686,7 @@
       {
         position: 0,
         phrase: 'Это что меню?',
-        effect: 'dipConfetti'
+        effect: 'dipConfetti',
         next_stage: 17
       },{
         position: 0,
@@ -696,7 +696,7 @@
       },{
         position: 0,
         phrase: 'Бенто',
-        effect: 'trueAnswer'
+        effect: 'trueAnswer',
         next_stage: 17
       }
     ]
@@ -735,7 +735,7 @@
       },{
         position: 0,
         phrase: 'dip',
-        effect: 'trueAnswer'
+        effect: 'trueAnswer',
         next_stage: 18
       },{
         position: 0,
@@ -765,7 +765,7 @@
       {
         position: 0,
         phrase: 'Символ',
-        effect: 'dipRain'
+        effect: 'dipRain',
         next_stage: 19
       },{
         position: 0,
@@ -833,17 +833,17 @@
       {
         position: 0,
         phrase: 'Бежать на stackoverflow',
-        effect: 'dipConfetti'
+        effect: 'dipConfetti',
         next_stage: 22
       },{
         position: 0,
         phrase: 'Спросить маму',
-        effect: 'bigCursor'
+        effect: 'bigCursor',
         next_stage: 22
       },{
         position: 0,
         phrase: 'Спросить папу',
-        effect: 'bigCursor'
+        effect: 'bigCursor',
         next_stage: 22
       }
     ]
@@ -866,7 +866,7 @@
       },{
         position: 0,
         phrase: 'flex-end',
-        effect: 'bigCursor'
+        effect: 'bigCursor',
         next_stage: 23
       },{
         position: 0,
@@ -889,17 +889,17 @@
       {
         position: 0,
         phrase: 'UTF-8',
-        effect: 'trueAnswer'
+        effect: 'trueAnswer',
         next_stage: 26
       },{
         position: 0,
         phrase: 'UTF-16',
-        effect: 'wrongAnswer'
+        effect: 'wrongAnswer',
         next_stage: 25
       },{
         position: 0,
         phrase: 'UTF-32',
-        effect: 'wrongAnswer'
+        effect: 'wrongAnswer',
         next_stage: 24
       }
     ]
@@ -917,12 +917,12 @@
       {
         position: 0,
         phrase: 'UTF-8',
-        effect: 'dipRain'
+        effect: 'dipRain',
         next_stage: 26
       },{
         position: 0,
         phrase: 'UTF-16',
-        effect: 'wrongAnswer'
+        effect: 'wrongAnswer',
         next_stage: 25
       }
     ]
@@ -940,7 +940,7 @@
       {
         position: 0,
         phrase: 'UTF-8',
-        effect: 'bigCursor'
+        effect: 'bigCursor',
         next_stage: 26
       }
     ]
