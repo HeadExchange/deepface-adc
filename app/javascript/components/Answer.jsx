@@ -10,23 +10,15 @@ export default class Answer extends React.Component {
 
   handleAnswerClick(id) {
     this.props.handleAnswerClick(id)
-    // this.autoScroll()
-
-    // answers.map((answer, id) => {
-    //     if (id !== 'question') {
-    //       document.querySelector('.chatAnswer').remove()
-    //     }
-    //   })
   }
 
-  autoScroll() {
-    // let
-    // document.querySelector('.chatAnswer').forEach(id => {
-    //   document.querySelector('.chatAnswer').scrollIntoView({
-    //     behavior: 'smooth'
-    //   })
-    // })
-  }
+  // autoScroll() {
+  //   let elements = document.getElementsByClassName('chatAnswer')
+  //   console.log(elements.length)
+  //   elements[elements.length - 1].scrollIntoView({
+  //     behavior: 'smooth'
+  //   })
+  // }
 
   cursorEffect() {
     const cursor = document.querySelector('.cursor')
@@ -91,5 +83,6 @@ export default class Answer extends React.Component {
         </div>
       </div>
     )
+    // autoScroll()
   }
 }
