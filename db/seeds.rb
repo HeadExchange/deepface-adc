@@ -221,7 +221,7 @@
         position: 0,
         phrase: 'Супер',
         next_stage: 5,
-        effect: 'dip_rain'
+        effect: 'dipRain'
       }
     ]
   },{
@@ -239,7 +239,7 @@
         position: 0,
         phrase: 'Лол',
         next_stage: 5,
-        effect: 'dip_rain'
+        effect: 'dipRain'
       }
     ]
   },{
@@ -265,7 +265,7 @@
         position: 0,
         phrase: 'Окей',
         next_stage: 5,
-        effect: 'dip_rain'
+        effect: 'dipRain'
       }
     ]
   },{
@@ -296,7 +296,7 @@
         position: 0,
         phrase: 'Супер',
         next_stage: 5,
-        effect: 'dip_rain'
+        effect: 'dipRain'
       }
     ]
   },{
@@ -1135,8 +1135,8 @@ end
 
 def create_answers(index, step, answers)
   answers.each_with_index do |answer, i|
-    a = step.answers.create!(position: answer[:position], phrase: answer[:phrase])
-    puts "Answer just created with phrase '#{ a.phrase }' for step with id #{ a.step.id }"
+    a = step.answers.create!(position: answer[:position], phrase: answer[:phrase], effect: answer[:effect])
+    puts "Answer just created with phrase '#{ a.phrase }' for step with id #{ a.step.id } and effect #{ a.effect }"
 
     @steps[index][:answers][i][:id] = a.id
   end

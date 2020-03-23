@@ -3,7 +3,7 @@
 @import 'mixins.scss';
 @import 'chat_mobile.scss';
 @import 'chat_tablet.scss';
-@import 'effects/effect_answer_true.scss';
+/* @import 'effects/effect_answer_true.scss'; */
 @import 'effects/effect_answer_false.scss';
 @import 'effects/dip_rain.scss';
 
@@ -81,8 +81,8 @@ body {
     z-index: 1;
 
     .timelineText p {
-        font-size: 15px;
-        margin-bottom: 5px;
+      font-size: 15px;
+      margin-bottom: 5px;
     }
 
     .timelineBar {
@@ -202,8 +202,6 @@ body {
         }
       }
 
-
-
       .answerBlock {
         display: flex;
         flex-direction: row;
@@ -282,80 +280,90 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
   position: absolute;
-  top: -236px;
+  top: -136px;
   overflow: hidden;
-  filter: blur(4px);
+  /* filter: blur(4px); */
 
   .y {
     .dipWhite {
-      -webkit-animation: y 2s linear infinite;
-      animation: y 2s linear infinite;
+      -webkit-animation: y 0.9s linear infinite;
+      animation: y 0.9s linear infinite;
       .x {
+        margin-top: 100px;
         background-image: url('./effects/diprain/white_dip.svg');
         background-size: cover;
-        width: 236px;
-        height: 236px;
-        -webkit-animation: x 8s linear infinite alternate;
-        animation: x 8s linear infinite alternate;
+        width: 276px;
+        height: 276px;
+        /*         width: 236px;
+height: 236px; */
+        -webkit-animation: x 4s linear infinite alternate;
+        animation: x 4s linear infinite alternate;
       }
       &.dipWhiteSecond {
         .x {
-          -webkit-animation: x 6s linear infinite alternate;
-          animation: x 6s linear infinite alternate;
+          margin-top: 300px;
+          -webkit-animation: x 3s linear infinite alternate;
+          animation: x 3s linear infinite alternate;
         }
       }
       &.dipWhiteThird {
         .x {
-          -webkit-animation: x 4s linear infinite alternate;
-          animation: x 4s linear infinite alternate;
+          margin-top: 200px;
+          -webkit-animation: x 2s linear infinite alternate;
+          animation: x 2s linear infinite alternate;
         }
       }
     }
     .dipGreen {
-      -webkit-animation: y 3s linear infinite;
-      animation: y 3s linear infinite;
+      -webkit-animation: y 0.7s linear infinite;
+      animation: y 0.7s linear infinite;
       .x {
         background-image: url('./effects/diprain/green_dip.svg');
         background-size: cover;
-        width: 236px;
-        height: 236px;
-        -webkit-animation: x 4s linear infinite alternate;
-        animation: x 4s linear infinite alternate;
+        width: 276px;
+        height: 276px;
+        margin-top: -100px;
+        -webkit-animation: x 2s linear infinite alternate;
+        animation: x 2s linear infinite alternate;
       }
       &.dipGreenSecond {
         .x {
-          -webkit-animation: x 7s linear infinite alternate;
-          animation: x 7s linear infinite alternate;
+          -webkit-animation: x 3s linear infinite alternate;
+          animation: x 3s linear infinite alternate;
         }
       }
       &.dipGreenThird {
         .x {
-          -webkit-animation: x 9s linear infinite alternate;
-          animation: x 9s linear infinite alternate;
-        }
-      }
-    }
-    .dipBlack {
-      -webkit-animation: y 4s linear infinite;
-      animation: y 4s linear infinite;
-      .x {
-        background-image: url('./effects/diprain/black_dip.svg');
-        background-size: cover;
-        width: 236px;
-        height: 236px;
-        -webkit-animation: x 3s linear infinite alternate;
-        animation: x 3s linear infinite alternate;
-      }
-      &.dipBlackSecond {
-        .x {
+          margin-top: 230px;
           -webkit-animation: x 4s linear infinite alternate;
           animation: x 4s linear infinite alternate;
         }
       }
+    }
+    .dipBlack {
+      -webkit-animation: y 0.8s linear infinite;
+      animation: y 0.8s linear infinite;
+      .x {
+        background-image: url('./effects/diprain/black_dip.svg');
+        background-size: cover;
+        width: 276px;
+        height: 276px;
+        margin-top: -200px;
+        -webkit-animation: x 5s linear infinite alternate;
+        animation: x 5s linear infinite alternate;
+      }
+      &.dipBlackSecond {
+        .x {
+          margin-top: 70px;
+          -webkit-animation: x 3s linear infinite alternate;
+          animation: x 3s linear infinite alternate;
+        }
+      }
       &.dipBlackThird {
         .x {
-          -webkit-animation: x 5s linear infinite alternate;
-          animation: x 5s linear infinite alternate;
+          margin-top: -100px;
+          -webkit-animation: x 2s linear infinite alternate;
+          animation: x 2s linear infinite alternate;
         }
       }
     }
@@ -381,7 +389,7 @@ body {
     }
   }
   @-webkit-keyframes x {
-    80% {
+    60% {
       opacity: 100%;
     }
     100% {
@@ -391,7 +399,7 @@ body {
     }
   }
   @keyframes x {
-    80% {
+    60% {
       opacity: 100%;
     }
     100% {

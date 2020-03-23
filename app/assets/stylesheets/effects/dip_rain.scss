@@ -11,12 +11,11 @@
   position: absolute;
   top: -236px;
   overflow: hidden;
-  filter: blur(4px);
 
   .y {
     .dipWhite {
-      -webkit-animation: y 2s linear infinite;
-      animation: y 2s linear infinite;
+      -webkit-animation: y 3.5s linear infinite;
+      animation: y 3.5s linear infinite;
       .x {
         background-image: url('./effects/diprain/white_dip.svg');
         background-size: cover;
@@ -39,8 +38,8 @@
       }
     }
     .dipGreen {
-      -webkit-animation: y 3s linear infinite;
-      animation: y 3s linear infinite;
+      -webkit-animation: y 3.5s linear infinite;
+      animation: y 3.5s linear infinite;
       .x {
         background-image: url('./effects/diprain/green_dip.svg');
         background-size: cover;
@@ -63,8 +62,8 @@
       }
     }
     .dipBlack {
-      -webkit-animation: y 4s linear infinite;
-      animation: y 4s linear infinite;
+      -webkit-animation: y 3.5s linear infinite;
+      animation: y 3.5s linear infinite;
       .x {
         background-image: url('./effects/diprain/black_dip.svg');
         background-size: cover;
@@ -98,7 +97,7 @@
     }
   }
   @keyframes y {
-    80% {
+    50% {
       opacity: 100%;
     }
     100% {
@@ -108,7 +107,7 @@
     }
   }
   @-webkit-keyframes x {
-    80% {
+    50% {
       opacity: 100%;
     }
     100% {
@@ -118,7 +117,7 @@
     }
   }
   @keyframes x {
-    80% {
+    50% {
       opacity: 100%;
     }
     100% {
