@@ -46,8 +46,11 @@ export default class Chat extends React.Component {
       .then(response => response.json())
       .then(data => {
         console.log('Success:', data)
-        steps.push(data)
-        this.setState({ steps: steps })
+
+        window.setTimeout(() => {
+          steps.push(data)
+          this.setState({ steps: steps })
+        }, 1000)
       })
       .catch(error => {
         console.error('Error:', error)
