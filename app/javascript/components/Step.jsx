@@ -9,11 +9,11 @@ export default class Step extends React.Component {
 
   componentDidUpdate(prevProps) {
     let elements = document.getElementsByClassName('chatAnswer')
-    // elements[elements.length - 1].scrollBy(0, 3000)
-    // window.scrollBy(0, window.innerHeight)
-    elements[elements.length - 1].scrollIntoView({
-      behavior: 'smooth'
-    })
+    window.setTimeout(() => {
+      elements[elements.length - 1].scrollIntoView({
+        behavior: 'smooth'
+      })
+    }, 1350)
   }
 
   render() {
@@ -29,11 +29,6 @@ export default class Step extends React.Component {
       answerElements.push(
         <Answer {...answer} handleAnswerClick={handleAnswerClick} key={i} />
       )
-    })
-    answerElements.forEach(autoScroll => {
-      document.querySelector('body').scrollIntoView({
-        behavior: 'smooth'
-      })
     })
 
     return (

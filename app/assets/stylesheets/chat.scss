@@ -5,613 +5,612 @@
 @import 'chat_tablet.scss';
 @import 'effects/effect_answer_true.scss';
 @import 'effects/effect_answer_false.scss';
-@import 'effects/dip_rain.scss';
-
-.cursor {
-  /* background-image: url('./cursors/cursor3.png'); */
-  background-image: url('./cursors/#{$nth}');
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 150px;
-  height: 150px;
-  position: absolute;
-  z-index: 10;
-  transition-duration: 100ms;
-  transition-timing-function: ease-out;
-  pointer-events: none;
-}
-.bigCursor {
-  animation: cursorAnimation 1s infinite alternate;
-}
-
-@-webkit-keyframes cursorAnimation {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(5);
-  }
-}
-
-@keyframes cursorAnimation {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(5);
-  }
-}
 
 body {
+  .cursor {
+    /* background-image: url('./cursors/cursor3.png'); */
+    background-image: url('./cursors/#{$nth}');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 10;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    pointer-events: none;
+  }
+  .bigCursor {
+    animation: cursorAnimation 1s infinite alternate;
+    @-webkit-keyframes cursorAnimation {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(5);
+      }
+    }
+
+    @keyframes cursorAnimation {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(5);
+      }
+    }
+  }
+
   background: #79ff39;
   /* cursor: url('./cursors/#{$nth}'), auto; */
   cursor: none;
+  pointer-events: all;
   /* cursor: auto; */
-}
 
-.background {
-  /* filter: blur(4px); */
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  overflow: scroll;
-
-  .shadow {
-    position: fixed;
-    top: 0;
+  .background {
+    /* filter: blur(4px); */
     width: 100vw;
-    height: 20vh;
-    background-image: linear-gradient(
-      rgba(121, 255, 57, 1) 72%,
-      rgba(121, 255, 57, 0) 90%
-    );
-    z-index: 1;
-  }
-
-  .share {
-    position: fixed;
-    z-index: 1;
-    width: 40px;
-    height: 40px;
-    background-color: #79ff39;
-    background-image: url('./share.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    right: 3vw;
-    top: 3vh;
-    border: 2px solid #000000;
-    box-sizing: border-box;
-    border-radius: 3px;
-
-    &:hover {
-      width: 144px;
-      border-radius: 100px;
-      /* cursor: url('./cursors/#{$pnt}'), auto; */
-      transition: 0.1s ease-in-out;
-    }
-  }
-
-  .shadowBottom {
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 3vh;
-    background-image: linear-gradient(
-      rgba(121, 255, 57, 0),
-      rgba(121, 255, 57, 1)
-    );
-    z-index: 1;
-  }
-
-  .timeline {
-    width: 343px;
-    height: 81px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    position: fixed;
-    top: 3vh;
-    z-index: 1;
+    justify-content: flex-end;
+    overflow: scroll;
 
-    .timelineText p {
-      font-size: 15px;
-      margin-bottom: 5px;
+    .shadow {
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      height: 20vh;
+      background-image: linear-gradient(
+        rgba(121, 255, 57, 1) 72%,
+        rgba(121, 255, 57, 0) 90%
+      );
+      z-index: 1;
     }
 
-    .timelineBar {
-      width: 100%;
-      height: 23px;
+    .share {
+      position: fixed;
+      z-index: 1;
+      width: 40px;
+      height: 40px;
+      background-color: #79ff39;
+      background-image: url('./share.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      right: 3vw;
+      top: 3vh;
       border: 2px solid #000000;
       box-sizing: border-box;
-      background: #ffffff;
-      border-radius: 100px;
-      margin-bottom: 19px;
+      border-radius: 3px;
 
-      .dip {
-        width: 21px;
-        height: 21px;
-        background: #000000;
-        border-radius: 100%;
-        transform: translate(-2px, -1px);
-        background-image: url('./dip/dip_timeline.svg');
-        background-size: cover;
+      &:hover {
+        width: 144px;
+        border-radius: 100px;
+        /* cursor: url('./cursors/#{$pnt}'), auto; */
+        transition: 0.1s ease-in-out;
       }
     }
-  }
 
-  .chat {
-    width: 95.5vw;
-    display: flex;
-    overflow: scroll;
-    scroll-behavior: smooth;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
-    ::-webkit-scrollbar {
-      display: none;
+    .shadowBottom {
+      position: fixed;
+      bottom: 0;
+      width: 100vw;
+      height: 3vh;
+      background-image: linear-gradient(
+        rgba(121, 255, 57, 0),
+        rgba(121, 255, 57, 1)
+      );
+      z-index: 1;
     }
 
-    div {
-      width: auto;
-      overflow: scroll;
+    .timeline {
+      width: 343px;
+      height: 81px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: fixed;
+      top: 3vh;
+      z-index: 1;
 
-      .replicaBlock {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        &:first-child {
-          margin-top: calc(15vh - 10px);
-        }
+      .timelineText p {
+        font-size: 15px;
+        margin-bottom: 5px;
+      }
 
-        .replicaElements {
-          .chatBlock {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-end;
-            justify-content: flex-start;
-            margin-top: 10px;
+      .timelineBar {
+        width: 100%;
+        height: 23px;
+        border: 2px solid #000000;
+        box-sizing: border-box;
+        background: #ffffff;
+        border-radius: 100px;
+        margin-bottom: 19px;
 
-            &:first-child {
-              border-radius: 30px 30px 30px 2px;
-            }
-
-            &:last-child {
-              border-radius: 2px 30px 30px 30px;
-            }
-            &:only-child {
-              border-radius: 30px 30px 30px 30px;
-            }
-            .phraseElements {
-              height: auto;
-              .chatPhrase {
-                background: #ffffff;
-                border-radius: 2px 30px 30px 2px;
-                padding: 16px 32px;
-                font-size: 32px;
-                line-height: 40px;
-                letter-spacing: 0.01em;
-                font-weight: normal;
-                font-family: 'PT Root UI Regular';
-                width: fit-content;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                float: left;
-                max-width: 918px;
-              }
-            }
-            .userDip {
-              width: 45px;
-              height: 45px;
-              background: black;
-              border-radius: 100%;
-              margin-right: 21px;
-              background-image: url('./dip/dip.svg');
-              background-size: cover;
-            }
-          }
-          .chatImage {
-            width: 495px;
-            height: auto;
-            background: #ffffff;
-            border-radius: 40px 40px 40px 2px;
-            background-size: cover;
-            display: flex;
-            align-items: center;
-
-            img {
-              width: 100%;
-            }
-          }
-        }
-
-        .userDip {
-          width: 45px;
-          height: 45px;
-          background: black;
+        .dip {
+          width: 21px;
+          height: 21px;
+          background: #000000;
           border-radius: 100%;
-          margin-right: 21px;
-          background-image: url('./dip/dip.svg');
+          transform: translate(-2px, -1px);
+          background-image: url('./dip/dip_timeline.svg');
           background-size: cover;
         }
       }
+    }
 
-      .answerBlock {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: flex-end;
-        margin-top: 100px;
-        overflow: visible;
-        .answerElements {
+    .chat {
+      width: 95.5vw;
+      display: flex;
+      overflow: scroll;
+      scroll-behavior: smooth;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      div {
+        width: auto;
+        overflow: scroll;
+
+        .replicaBlock {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          &:first-child {
+            margin-top: calc(15vh - 10px);
+          }
+
+          .replicaElements {
+            .chatBlock {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+              justify-content: flex-start;
+              margin-top: 10px;
+
+              &:first-child {
+                border-radius: 30px 30px 30px 2px;
+              }
+
+              &:last-child {
+                border-radius: 2px 30px 30px 30px;
+              }
+              &:only-child {
+                border-radius: 30px 30px 30px 30px;
+              }
+              .phraseElements {
+                height: auto;
+                .chatPhrase {
+                  background: #ffffff;
+                  border-radius: 2px 30px 30px 2px;
+                  padding: 16px 32px;
+                  font-size: 32px;
+                  line-height: 40px;
+                  letter-spacing: 0.01em;
+                  font-weight: normal;
+                  font-family: 'PT Root UI Regular';
+                  width: fit-content;
+                  -webkit-font-smoothing: antialiased;
+                  -moz-osx-font-smoothing: grayscale;
+                  float: left;
+                  max-width: 918px;
+                }
+              }
+              .userDip {
+                width: 45px;
+                height: 45px;
+                background: black;
+                border-radius: 100%;
+                margin-right: 21px;
+                background-image: url('./dip/dip.svg');
+                background-size: cover;
+              }
+            }
+            .chatImage {
+              width: 495px;
+              height: auto;
+              background: #ffffff;
+              border-radius: 40px 40px 40px 2px;
+              background-size: cover;
+              display: flex;
+              align-items: center;
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+
+          .userDip {
+            width: 45px;
+            height: 45px;
+            background: black;
+            border-radius: 100%;
+            margin-right: 21px;
+            background-image: url('./dip/dip.svg');
+            background-size: cover;
+          }
+        }
+
+        .answerBlock {
           display: flex;
           flex-direction: row;
           align-items: flex-end;
           justify-content: flex-end;
-          flex-wrap: wrap;
-          width: 73%;
+          margin-top: 100px;
           overflow: visible;
-
-          #question {
+          .answerElements {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            width: 73%;
             overflow: visible;
 
-            .answer {
-              float: right;
-              max-width: 973px;
+            #question {
               overflow: visible;
 
-              .chatAnswer {
+              .answer {
                 float: right;
-                font-family: 'PT Root UI Medium';
-                font-size: 64px;
-                line-height: 131%;
-                letter-spacing: 0.01em;
-                text-align: left;
-                background: #262626;
-                border-radius: 60px 60px 4px 60px;
-                padding: 32px 64px;
-                margin: 0 10px 10px 0;
-                color: #ffffff;
-                width: fit-content;
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
+                max-width: 973px;
                 overflow: visible;
 
-                &:hover {
-                  background: #ffffff;
-                  color: #262626;
-                  box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
-                  /* cursor: url('./cursors/#{$pnt}.svg'), pointer; */
-                  /* cursor: url('./cursors/#{$png}'), auto; */
-                  transition: 0.12s ease-in-out;
+                .chatAnswer {
+                  float: right;
+                  font-family: 'PT Root UI Medium';
+                  font-size: 64px;
+                  line-height: 131%;
+                  letter-spacing: 0.01em;
+                  text-align: left;
+                  background: #262626;
+                  border-radius: 60px 60px 4px 60px;
+                  padding: 32px 64px;
+                  margin: 0 10px 10px 0;
+                  color: #ffffff;
+                  width: fit-content;
+                  -webkit-font-smoothing: antialiased;
+                  -moz-osx-font-smoothing: grayscale;
+                  overflow: visible;
+
+                  &:hover {
+                    background: #ffffff;
+                    color: #262626;
+                    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
+                    /* cursor: url('./cursors/#{$pnt}.svg'), pointer; */
+                    /* cursor: url('./cursors/#{$png}'), auto; */
+                    transition: 0.12s ease-in-out;
+                  }
                 }
               }
             }
           }
-        }
-        .userDip {
-          width: 45px;
-          height: 45px;
-          background: black;
-          border-radius: 100%;
-          margin: 0 0 10px 11px;
+          .userDip {
+            width: 45px;
+            height: 45px;
+            background: black;
+            border-radius: 100%;
+            margin: 0 0 10px 11px;
+          }
         }
       }
     }
   }
-}
 
-//стили дипрейна
+  //стили дипрейна
 
-.dipRain {
-  &.hidden {
-    display: none;
-  }
-  width: 100vw;
-  height: 1025px;
-  z-index: 3;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  position: absolute;
-  top: -136px;
-  overflow: hidden;
-  /* filter: blur(4px); */
+  .dipRain {
+    &.hidden {
+      display: none;
+    }
+    width: 100vw;
+    height: 1025px;
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: absolute;
+    top: -136px;
+    overflow: hidden;
+    /* filter: blur(4px); */
 
-  .y {
-    .dipWhite {
-      -webkit-animation: y 0.9s linear infinite;
-      animation: y 0.9s linear infinite;
-      .x {
-        margin-top: 100px;
-        background-image: url('./effects/diprain/white_dip.svg');
-        background-size: cover;
-        width: 276px;
-        height: 276px;
-        /*         width: 236px;
+    .y {
+      .dipWhite {
+        -webkit-animation: y 0.9s linear infinite;
+        animation: y 0.9s linear infinite;
+        .x {
+          margin-top: 100px;
+          background-image: url('./effects/diprain/white_dip.svg');
+          background-size: cover;
+          width: 276px;
+          height: 276px;
+          /*         width: 236px;
 height: 236px; */
-        -webkit-animation: x 4s linear infinite alternate;
-        animation: x 4s linear infinite alternate;
-      }
-      &.dipWhiteSecond {
-        .x {
-          margin-top: 300px;
-          -webkit-animation: x 3s linear infinite alternate;
-          animation: x 3s linear infinite alternate;
-        }
-      }
-      &.dipWhiteThird {
-        .x {
-          margin-top: 200px;
-          -webkit-animation: x 2s linear infinite alternate;
-          animation: x 2s linear infinite alternate;
-        }
-      }
-    }
-    .dipGreen {
-      -webkit-animation: y 0.7s linear infinite;
-      animation: y 0.7s linear infinite;
-      .x {
-        background-image: url('./effects/diprain/green_dip.svg');
-        background-size: cover;
-        width: 276px;
-        height: 276px;
-        margin-top: -100px;
-        -webkit-animation: x 2s linear infinite alternate;
-        animation: x 2s linear infinite alternate;
-      }
-      &.dipGreenSecond {
-        .x {
-          -webkit-animation: x 3s linear infinite alternate;
-          animation: x 3s linear infinite alternate;
-        }
-      }
-      &.dipGreenThird {
-        .x {
-          margin-top: 230px;
           -webkit-animation: x 4s linear infinite alternate;
           animation: x 4s linear infinite alternate;
         }
-      }
-    }
-    .dipBlack {
-      -webkit-animation: y 0.8s linear infinite;
-      animation: y 0.8s linear infinite;
-      .x {
-        background-image: url('./effects/diprain/black_dip.svg');
-        background-size: cover;
-        width: 276px;
-        height: 276px;
-        margin-top: -200px;
-        -webkit-animation: x 5s linear infinite alternate;
-        animation: x 5s linear infinite alternate;
-      }
-      &.dipBlackSecond {
-        .x {
-          margin-top: 70px;
-          -webkit-animation: x 3s linear infinite alternate;
-          animation: x 3s linear infinite alternate;
+        &.dipWhiteSecond {
+          .x {
+            margin-top: 300px;
+            -webkit-animation: x 3s linear infinite alternate;
+            animation: x 3s linear infinite alternate;
+          }
+        }
+        &.dipWhiteThird {
+          .x {
+            margin-top: 200px;
+            -webkit-animation: x 2s linear infinite alternate;
+            animation: x 2s linear infinite alternate;
+          }
         }
       }
-      &.dipBlackThird {
+      .dipGreen {
+        -webkit-animation: y 0.7s linear infinite;
+        animation: y 0.7s linear infinite;
         .x {
+          background-image: url('./effects/diprain/green_dip.svg');
+          background-size: cover;
+          width: 276px;
+          height: 276px;
           margin-top: -100px;
           -webkit-animation: x 2s linear infinite alternate;
           animation: x 2s linear infinite alternate;
         }
-      }
-    }
-  }
-  @-webkit-keyframes y {
-    50% {
-      opacity: 100%;
-    }
-    100% {
-      -webkit-transform: translateY(calc(100vw - 739px));
-      transform: translateY(calc(100vw - 739px));
-      opacity: 0%;
-    }
-  }
-  @keyframes y {
-    80% {
-      opacity: 100%;
-    }
-    100% {
-      -webkit-transform: translateY(calc(100vw - 739px));
-      transform: translateY(calc(100vw - 739px));
-      opacity: 0%;
-    }
-  }
-  @-webkit-keyframes x {
-    60% {
-      opacity: 100%;
-    }
-    100% {
-      -webkit-transform: translateX(calc(100vh - 739px));
-      transform: translateX(calc(100vh - 739px));
-      opacity: 0%;
-    }
-  }
-  @keyframes x {
-    60% {
-      opacity: 100%;
-    }
-    100% {
-      -webkit-transform: translateX(calc(100vh - 739px));
-      transform: translateX(calc(100vh - 739px));
-      opacity: 0%;
-    }
-  }
-}
-
-///////////////////////////////////////////////////////////////////////////////
-
-//стили конфетти
-
-.dipConfetti {
-  &.hidden {
-    display: none;
-  }
-  width: 80vw;
-  height: 1025px;
-  z-index: 3;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  position: absolute;
-  top: -196px;
-  left: 10vw;
-  overflow: hidden;
-  /* filter: blur(4px); */
-
-  .y {
-    .dipSmall {
-      -webkit-animation: y 2s linear infinite;
-      animation: y 2s linear infinite;
-      .x {
-        background-image: url('./dip/dip_transformed.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 86px;
-        height: 32px;
-        transform-style: preserve-3d;
-        -webkit-animation: x rotation 3s linear infinite;
-        animation: x rotation 3s linear infinite;
-      }
-      &.dipSmallSecond {
-        .x {
-          margin-top: 300px;
-          width: 32px;
-          height: 32px;
-          -webkit-animation: x 2s linear infinite alternate;
-          animation: x 2s linear infinite alternate;
+        &.dipGreenSecond {
+          .x {
+            -webkit-animation: x 3s linear infinite alternate;
+            animation: x 3s linear infinite alternate;
+          }
+        }
+        &.dipGreenThird {
+          .x {
+            margin-top: 230px;
+            -webkit-animation: x 4s linear infinite alternate;
+            animation: x 4s linear infinite alternate;
+          }
         }
       }
-      &.dipSmallThird {
-        width: 75px;
-        height: 40px;
+      .dipBlack {
+        -webkit-animation: y 0.8s linear infinite;
+        animation: y 0.8s linear infinite;
         .x {
+          background-image: url('./effects/diprain/black_dip.svg');
+          background-size: cover;
+          width: 276px;
+          height: 276px;
+          margin-top: -200px;
+          -webkit-animation: x 5s linear infinite alternate;
+          animation: x 5s linear infinite alternate;
+        }
+        &.dipBlackSecond {
+          .x {
+            margin-top: 70px;
+            -webkit-animation: x 3s linear infinite alternate;
+            animation: x 3s linear infinite alternate;
+          }
+        }
+        &.dipBlackThird {
+          .x {
+            margin-top: -100px;
+            -webkit-animation: x 2s linear infinite alternate;
+            animation: x 2s linear infinite alternate;
+          }
+        }
+      }
+    }
+    @-webkit-keyframes y {
+      50% {
+        opacity: 100%;
+      }
+      100% {
+        -webkit-transform: translateY(calc(100vw - 739px));
+        transform: translateY(calc(100vw - 739px));
+        opacity: 0%;
+      }
+    }
+    @keyframes y {
+      80% {
+        opacity: 100%;
+      }
+      100% {
+        -webkit-transform: translateY(calc(100vw - 739px));
+        transform: translateY(calc(100vw - 739px));
+        opacity: 0%;
+      }
+    }
+    @-webkit-keyframes x {
+      60% {
+        opacity: 100%;
+      }
+      100% {
+        -webkit-transform: translateX(calc(100vh - 739px));
+        transform: translateX(calc(100vh - 739px));
+        opacity: 0%;
+      }
+    }
+    @keyframes x {
+      60% {
+        opacity: 100%;
+      }
+      100% {
+        -webkit-transform: translateX(calc(100vh - 739px));
+        transform: translateX(calc(100vh - 739px));
+        opacity: 0%;
+      }
+    }
+  }
+
+  ///////////////////////////////////////////////////////////////////////////////
+
+  //стили конфетти
+
+  .dipConfetti {
+    &.hidden {
+      display: none;
+    }
+    width: 80vw;
+    height: 1025px;
+    z-index: 3;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: absolute;
+    top: -196px;
+    left: 10vw;
+    overflow: hidden;
+    /* filter: blur(4px); */
+
+    .y {
+      .dipSmall {
+        -webkit-animation: y 2s linear infinite;
+        animation: y 2s linear infinite;
+        .x {
+          background-image: url('./dip/dip_transformed.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 86px;
+          height: 32px;
+          transform-style: preserve-3d;
+          -webkit-animation: x rotation 3s linear infinite;
+          animation: x rotation 3s linear infinite;
+        }
+        &.dipSmallSecond {
+          .x {
+            margin-top: 300px;
+            width: 32px;
+            height: 32px;
+            -webkit-animation: x 2s linear infinite alternate;
+            animation: x 2s linear infinite alternate;
+          }
+        }
+        &.dipSmallThird {
+          width: 75px;
+          height: 40px;
+          .x {
+            -webkit-animation: x 4s linear infinite alternate;
+            animation: x 4s linear infinite alternate;
+          }
+        }
+      }
+      .dipMedium {
+        -webkit-animation: y 2s linear infinite;
+        animation: y 2s linear infinite;
+        .x {
+          background-image: url('./effects/diprain/black_dip.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          margin-top: 100px;
+          width: 100px;
+          height: 100px;
           -webkit-animation: x 4s linear infinite alternate;
           animation: x 4s linear infinite alternate;
         }
+        &.dipMediumSecond {
+          .x {
+            margin-top: 300px;
+            width: 120px;
+            height: 136px;
+            -webkit-animation: x 3s linear infinite alternate;
+            animation: x 3s linear infinite alternate;
+          }
+        }
+        &.dipMediumThird {
+          .x {
+            width: 115px;
+            height: 140px;
+            -webkit-animation: x 2s linear infinite alternate;
+            animation: x 2s linear infinite alternate;
+          }
+        }
       }
-    }
-    .dipMedium {
-      -webkit-animation: y 2s linear infinite;
-      animation: y 2s linear infinite;
-      .x {
-        background-image: url('./effects/diprain/black_dip.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-top: 100px;
-        width: 100px;
-        height: 100px;
-        -webkit-animation: x 4s linear infinite alternate;
-        animation: x 4s linear infinite alternate;
-      }
-      &.dipMediumSecond {
+      .dipLarge {
+        -webkit-animation: y 1.5s linear infinite;
+        animation: y 1.5s linear infinite;
         .x {
-          margin-top: 300px;
-          width: 120px;
+          background-image: url('./dip/dip_transformed.svg');
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 150px;
           height: 136px;
           -webkit-animation: x 3s linear infinite alternate;
           animation: x 3s linear infinite alternate;
         }
-      }
-      &.dipMediumThird {
-        .x {
-          width: 115px;
-          height: 140px;
-          -webkit-animation: x 2s linear infinite alternate;
-          animation: x 2s linear infinite alternate;
+        &.dipLargeSecond {
+          .x {
+            margin-top: 300px;
+            width: 178px;
+            height: 150px;
+            -webkit-animation: x 3s linear infinite alternate;
+            animation: x 3s linear infinite alternate;
+          }
+        }
+        &.dipLargeThird {
+          .x {
+            margin-top: 100px;
+            width: 170px;
+            height: 146px;
+            -webkit-animation: x 1s linear infinite alternate;
+            animation: x 1s linear infinite alternate;
+          }
         }
       }
     }
-    .dipLarge {
-      -webkit-animation: y 1.5s linear infinite;
-      animation: y 1.5s linear infinite;
-      .x {
-        background-image: url('./dip/dip_transformed.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 150px;
-        height: 136px;
-        -webkit-animation: x 3s linear infinite alternate;
-        animation: x 3s linear infinite alternate;
+    @-webkit-keyframes y {
+      90% {
+        opacity: 100%;
       }
-      &.dipLargeSecond {
-        .x {
-          margin-top: 300px;
-          width: 178px;
-          height: 150px;
-          -webkit-animation: x 3s linear infinite alternate;
-          animation: x 3s linear infinite alternate;
-        }
-      }
-      &.dipLargeThird {
-        .x {
-          margin-top: 100px;
-          width: 170px;
-          height: 146px;
-          -webkit-animation: x 1s linear infinite alternate;
-          animation: x 1s linear infinite alternate;
-        }
+      100% {
+        -webkit-transform: translateY(calc(100vw - 739px));
+        transform: translateY(calc(100vw - 739px));
+        opacity: 0%;
       }
     }
-  }
-  @-webkit-keyframes y {
-    90% {
-      opacity: 100%;
+    @keyframes y {
+      90% {
+        opacity: 100%;
+      }
+      100% {
+        -webkit-transform: translateY(calc(100vw - 739px));
+        transform: translateY(calc(100vw - 739px));
+        opacity: 0%;
+      }
     }
-    100% {
-      -webkit-transform: translateY(calc(100vw - 739px));
-      transform: translateY(calc(100vw - 739px));
-      opacity: 0%;
+    @-webkit-keyframes x {
+      0% {
+        transform: rotateX(0deg);
+        transform: rotateY(30deg);
+      }
+      90% {
+        opacity: 100%;
+      }
+      100% {
+        -webkit-transform: translateX(calc(100vh - 739px));
+        transform: translateX(calc(100vh - 739px));
+        opacity: 0%;
+        transform: rotateY(360deg);
+        transform: rotateX(180deg);
+      }
     }
-  }
-  @keyframes y {
-    90% {
-      opacity: 100%;
-    }
-    100% {
-      -webkit-transform: translateY(calc(100vw - 739px));
-      transform: translateY(calc(100vw - 739px));
-      opacity: 0%;
-    }
-  }
-  @-webkit-keyframes x {
-    0% {
-      transform: rotateX(0deg);
-      transform: rotateY(30deg);
-    }
-    90% {
-      opacity: 100%;
-    }
-    100% {
-      -webkit-transform: translateX(calc(100vh - 739px));
-      transform: translateX(calc(100vh - 739px));
-      opacity: 0%;
-      transform: rotateY(360deg);
-      transform: rotateX(180deg);
-    }
-  }
-  @keyframes x {
-    0% {
-      transform: rotateX(0deg);
-      transform: rotateY(30deg);
-    }
-    90% {
-      opacity: 100%;
-    }
-    100% {
-      -webkit-transform: translateX(calc(100vh - 739px));
-      transform: translateX(calc(100vh - 739px));
-      opacity: 0%;
-      transform: rotateY(360deg);
-      transform: rotateX(180deg);
+    @keyframes x {
+      0% {
+        transform: rotateX(0deg);
+        transform: rotateY(30deg);
+      }
+      90% {
+        opacity: 100%;
+      }
+      100% {
+        -webkit-transform: translateX(calc(100vh - 739px));
+        transform: translateX(calc(100vh - 739px));
+        opacity: 0%;
+        transform: rotateY(360deg);
+        transform: rotateX(180deg);
+      }
     }
   }
 }

@@ -12,21 +12,13 @@ export default class Answer extends React.Component {
     this.props.handleAnswerClick(id)
   }
 
-  // autoScroll() {
-  //   let elements = document.getElementsByClassName('chatAnswer')
-  //   console.log(elements.length)
-  //   elements[elements.length - 1].scrollIntoView({
-  //     behavior: 'smooth'
-  //   })
-  // }
-
   cursorEffect() {
     const cursor = document.querySelector('.cursor')
 
     document.addEventListener('mousemove', e => {
       cursor.setAttribute(
         'style',
-        'top: ' + (e.pageY - 20) + 'px; left: ' + (e.pageX - 20) + 'px;'
+        'top: ' + (e.pageY - 30) + 'px; left: ' + (e.pageX - 20) + 'px;'
       )
     })
   }
@@ -35,9 +27,9 @@ export default class Answer extends React.Component {
     console.log(effect)
     if (effect == 'wrongAnswer') {
       document.querySelector('body').classList.add('wrongAnswer')
-      window.setTimeout(() => {
-        document.querySelector('body').classList.remove('wrongAnswer')
-      }, 1500)
+      // window.setTimeout(() => {
+      //   document.querySelector('body').classList.remove('wrongAnswer')
+      // }, 1500)
     } else if (effect == 'trueAnswer') {
       document.querySelector('body').classList.add('trueAnswer')
       window.setTimeout(() => {
@@ -63,8 +55,8 @@ export default class Answer extends React.Component {
 
   render() {
     const { handleAnswerClick } = this
-    const { effectClick, autoScroll, cursor, cursorEffect } = this
-    const { id, phrase, effect, answers } = this.props
+    const { effectClick, cursorEffect } = this
+    const { id, phrase, effect } = this.props
     cursorEffect()
 
     return (
