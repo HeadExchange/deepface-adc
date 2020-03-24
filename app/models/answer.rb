@@ -8,9 +8,11 @@ class Answer < ApplicationRecord
 
   def as_json
     {
-      id:     id,
-      effect: effect,
-      phrase: phrase
+      id:      id,
+      stepId:  step_id,
+      effect:  effect,
+      phrase:  phrase,
+      display: true
     }
   end
 end

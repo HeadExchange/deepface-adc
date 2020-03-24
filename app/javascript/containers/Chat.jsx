@@ -12,9 +12,30 @@ export default class Chat extends React.Component {
     this.handleAnswerClick = this.handleAnswerClick.bind(this)
   }
 
-  handleAnswerClick(id) {
+  handleAnswerClick(id, stepId) {
     const data = { id: id }
-    let steps = this.state.steps
+    let steps = []
+
+    this.state.steps.map(step => {
+      if (step.id == stepId) {
+        let answers = []
+
+        step.answers.map(answer => {
+          if (answer.id == id) {
+            answer.disabled = true
+          } else {
+            answer.display = false
+          }
+
+          answers.push(answer)
+        })
+
+        step.answers = answers
+        steps.push(step)
+      } else {
+        steps.push(step)
+      }
+    })
 
     fetch('/v1/chat/answer', {
       method: 'POST',

@@ -278,7 +278,7 @@ body {
                   -moz-osx-font-smoothing: grayscale;
                   overflow: visible;
 
-                  &:hover {
+                  &:not(.disabled):hover {
                     background: #ffffff;
                     color: #262626;
                     box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
@@ -286,6 +286,15 @@ body {
                     /* cursor: url('./cursors/#{$png}'), auto; */
                     transition: 0.12s ease-in-out;
                   }
+
+                  // &:hover {
+                  //   background: #ffffff;
+                  //   color: #262626;
+                  //   box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
+                  //   /* cursor: url('./cursors/#{$pnt}.svg'), pointer; */
+                  //   /* cursor: url('./cursors/#{$png}'), auto; */
+                  //   transition: 0.12s ease-in-out;
+                  // }
                 }
               }
             }
