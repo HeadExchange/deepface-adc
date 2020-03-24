@@ -63,7 +63,6 @@ export default class Answer extends React.Component {
     const { handleAnswerClick } = this
     const { effectClick, cursorEffect } = this
     const { id, stepId, phrase, effect, disabled } = this.props
-
     const classes = classnames({
       chatAnswer: true,
       disabled: disabled

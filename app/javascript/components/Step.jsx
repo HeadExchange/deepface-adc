@@ -1,6 +1,8 @@
 import React from 'react'
 import Replica from '../components/Replica'
 import Answer from '../components/Answer'
+import DipRain from '../components/DipRain'
+import DipConfetti from '../components/DipConfetti'
 
 export default class Step extends React.Component {
   constructor(props) {
@@ -47,6 +49,8 @@ export default class Step extends React.Component {
           <div className="answerElements">{answerElements}</div>
           <div className="userDip"></div>
         </div>
+        <DipRain />
+        <DipConfetti />
       </div>
     )
   }
