@@ -199,7 +199,8 @@
       {
         position: 0,
         phrase: 'Забрать',
-        next_stage: 28
+        next_stage: 28,
+        effect: 'bigCursor'
       }
     ]
   },{
@@ -221,7 +222,7 @@
         position: 0,
         phrase: 'Супер',
         next_stage: 5,
-        effect: 'dip_rain'
+        effect: 'dipRain'
       }
     ]
   },{
@@ -239,7 +240,7 @@
         position: 0,
         phrase: 'Лол',
         next_stage: 5,
-        effect: 'dip_rain'
+        effect: 'dipRain'
       }
     ]
   },{
@@ -265,7 +266,7 @@
         position: 0,
         phrase: 'Окей',
         next_stage: 5,
-        effect: 'dip_rain'
+        effect: 'dipRain'
       }
     ]
   },{
@@ -296,7 +297,7 @@
         position: 0,
         phrase: 'Супер',
         next_stage: 5,
-        effect: 'dip_rain'
+        effect: 'dipRain'
       }
     ]
   },{
@@ -313,15 +314,18 @@
       {
         position: 0,
         phrase: 'Дизайнер',
-        next_stage: 12
+        next_stage: 12,
+        effect: 'bigCursor'
       },{
         position: 0,
         phrase: 'Прогер',
-        next_stage: 21
+        next_stage: 21,
+        effect: 'bigCursor'
       },{
         position: 0,
         phrase: '???',
-        next_stage: 6
+        next_stage: 6,
+        effect: 'bigCursor'
       }
     ]
   },{
@@ -338,15 +342,18 @@
       {
         position: 0,
         phrase: 'Дизайнер',
-        next_stage: 12
+        next_stage: 12,
+        effect: 'bigCursor'
       },{
         position: 0,
         phrase: 'Прогер',
-        next_stage: 21
+        next_stage: 21,
+        effect: 'bigCursor'
       },{
         position: 0,
         phrase: '???',
-        next_stage: 6
+        next_stage: 6,
+        effect: 'bigCursor'
       }
     ]
   },{
@@ -363,15 +370,18 @@
       {
         position: 0,
         phrase: 'Дизайнер',
-        next_stage: 12
+        next_stage: 12,
+        effect: 'bigCursor'
       },{
         position: 0,
         phrase: 'Прогер',
-        next_stage: 21
+        next_stage: 21,
+        effect: 'bigCursor'
       },{
         position: 0,
         phrase: '???',
-        next_stage: 6
+        next_stage: 6,
+        effect: 'bigCursor'
       }
     ]
   },{
@@ -389,7 +399,8 @@
       {
         position: 0,
         phrase: 'Эм, ну смешно...',
-        next_stage: 7
+        next_stage: 7,
+        effect: 'dipConfetti'
       }
     ]
     },{
@@ -406,7 +417,7 @@
       {
         position: 0,
         phrase: 'Sketch',
-        effect: '',
+        effect: 'trueAnswer',
         next_stage: 8
       },{
         position: 0,
@@ -434,7 +445,7 @@
       },{
         position: 0,
         phrase: 'Photoshop',
-        effect: '',
+        effect: 'bigCursor',
         next_stage: 9
       }
     ]
@@ -457,7 +468,7 @@
       },{
         position: 0,
         phrase: 'TUI',
-        effect: '',
+        effect: 'dipConfetti',
         next_stage: 10
       }
     ]
@@ -509,7 +520,8 @@
       {
         position: 0,
         phrase: 'Забрать',
-        next_stage: 28
+        next_stage: 28,
+        effect: 'dipRain'
       }
     ]
   },{
@@ -531,7 +543,7 @@
       {
         position: 0,
         phrase: 'Alt burger',
-        effect: '',
+        effect: 'trueAnswer',
         next_stage: 13
       },{
         position: 0,
@@ -574,7 +586,7 @@
       },{
         position: 0,
         phrase: 'Гамбургер',
-        effect: '',
+        effect: 'dipConfetti',
         next_stage: 14
       },{
         position: 0,
@@ -612,7 +624,7 @@
       },{
         position: 0,
         phrase: 'Кебаб',
-        effect: '',
+        effect: 'trueAnswer',
         next_stage: 15
       },{
         position: 0,
@@ -648,7 +660,7 @@
       },{
         position: 0,
         phrase: 'Шашлык',
-        effect: '',
+        effect: 'dipRain',
         next_stage: 16
       },{
         position: 0,
@@ -677,7 +689,7 @@
       {
         position: 0,
         phrase: 'Это что меню?',
-        effect: '',
+        effect: 'dipConfetti',
         next_stage: 17
       },{
         position: 0,
@@ -687,7 +699,7 @@
       },{
         position: 0,
         phrase: 'Бенто',
-        effect: '',
+        effect: 'trueAnswer',
         next_stage: 17
       }
     ]
@@ -726,7 +738,7 @@
       },{
         position: 0,
         phrase: 'dip',
-        effect: '',
+        effect: 'trueAnswer',
         next_stage: 18
       },{
         position: 0,
@@ -756,7 +768,7 @@
       {
         position: 0,
         phrase: 'Символ',
-        effect: '',
+        effect: 'dipRain',
         next_stage: 19
       },{
         position: 0,
@@ -782,7 +794,8 @@
       {
         position: 0,
         phrase: 'Супер',
-        next_stage: 28
+        next_stage: 28,
+        effect: 'bigCursor'
       }
     ]
     },{
@@ -805,7 +818,8 @@
       {
         position: 0,
         phrase: 'Супер',
-        next_stage: 28
+        next_stage: 28,
+        effect: 'dipRain'
       }
     ]
   },{
@@ -822,17 +836,17 @@
       {
         position: 0,
         phrase: 'Бежать на stackoverflow',
-        effect: '',
+        effect: 'dipConfetti',
         next_stage: 22
       },{
         position: 0,
         phrase: 'Спросить маму',
-        effect: '',
+        effect: 'bigCursor',
         next_stage: 22
       },{
         position: 0,
         phrase: 'Спросить папу',
-        effect: '',
+        effect: 'bigCursor',
         next_stage: 22
       }
     ]
@@ -855,7 +869,7 @@
       },{
         position: 0,
         phrase: 'flex-end',
-        effect: '',
+        effect: 'bigCursor',
         next_stage: 23
       },{
         position: 0,
@@ -878,17 +892,17 @@
       {
         position: 0,
         phrase: 'UTF-8',
-        effect: '',
+        effect: 'trueAnswer',
         next_stage: 26
       },{
         position: 0,
         phrase: 'UTF-16',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 25
       },{
         position: 0,
         phrase: 'UTF-32',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 24
       }
     ]
@@ -906,12 +920,12 @@
       {
         position: 0,
         phrase: 'UTF-8',
-        effect: '',
+        effect: 'dipRain',
         next_stage: 26
       },{
         position: 0,
         phrase: 'UTF-16',
-        effect: '',
+        effect: 'wrongAnswer',
         next_stage: 25
       }
     ]
@@ -929,7 +943,7 @@
       {
         position: 0,
         phrase: 'UTF-8',
-        effect: '',
+        effect: 'bigCursor',
         next_stage: 26
       }
     ]
@@ -947,7 +961,8 @@
       {
         position: 0,
         phrase: 'Супер',
-        next_stage: 27
+        next_stage: 27,
+        effect: 'dipConfetti'
       }
     ]
   },{
@@ -969,7 +984,8 @@
       {
         position: 0,
         phrase: 'Забрать',
-        next_stage: 28
+        next_stage: 28,
+        effect: 'trueAnswer'
       }
     ]
   },{
@@ -986,7 +1002,8 @@
       {
         position: 0,
         phrase: 'Конечно!',
-        next_stage: 30
+        next_stage: 30,
+        effect: 'dipConfetti'
       },{
         position: 0,
         phrase: 'Нет',
@@ -1026,11 +1043,13 @@
       {
         position: 0,
         phrase: 'Хочу!',
-        next_stage: 30
+        next_stage: 30,
+        effect: 'bigCursor'
       },{
         position: 0,
         phrase: 'Нет',
-        next_stage: 29
+        next_stage: 29,
+        effect: 'wrongAnswer'
       }
     ]
   },{
@@ -1053,11 +1072,13 @@
       {
         position: 0,
         phrase: 'Да!',
-        next_stage: 30
+        next_stage: 30,
+        effect: 'dipConfetti'
       },{
         position: 0,
         phrase: 'Нет',
-        next_stage: 29
+        next_stage: 29,
+        effect: 'trueAnswer'
       }
     ]
   },{
@@ -1135,8 +1156,8 @@ end
 
 def create_answers(index, step, answers)
   answers.each_with_index do |answer, i|
-    a = step.answers.create!(position: answer[:position], phrase: answer[:phrase])
-    puts "Answer just created with phrase '#{ a.phrase }' for step with id #{ a.step.id }"
+    a = step.answers.create!(position: answer[:position], phrase: answer[:phrase], effect: answer[:effect])
+    puts "Answer just created with phrase '#{ a.phrase }' for step with id #{ a.step.id } and effect #{ a.effect }"
 
     @steps[index][:answers][i][:id] = a.id
   end

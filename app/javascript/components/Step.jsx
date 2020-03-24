@@ -7,6 +7,15 @@ export default class Step extends React.Component {
     super(props)
   }
 
+  componentDidUpdate(prevProps) {
+    let elements = document.getElementsByClassName('chatAnswer')
+    window.setTimeout(() => {
+      elements[elements.length - 1].scrollIntoView({
+        behavior: 'smooth'
+      })
+    }, 1350)
+  }
+
   render() {
     const { title, replicas, answers, handleAnswerClick } = this.props
     let replicaElements = []
