@@ -12,22 +12,22 @@ body {
     background-image: url('./cursors/#{$nth}');
     background-size: contain;
     background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
+    width: 55px;
+    height: 64px;
     position: absolute;
     z-index: 10;
-    transition-duration: 200ms;
+    transition-duration: 100ms;
     transition-timing-function: ease-out;
     pointer-events: none;
   }
   .bigCursor {
-    animation: cursorAnimation 1s infinite alternate;
+    animation: cursorAnimation 0.5s infinite alternate;
     @-webkit-keyframes cursorAnimation {
       from {
         transform: scale(1);
       }
       to {
-        transform: scale(5);
+        transform: scale(10);
       }
     }
 
@@ -36,7 +36,7 @@ body {
         transform: scale(1);
       }
       to {
-        transform: scale(5);
+        transform: scale(10);
       }
     }
   }
@@ -278,7 +278,7 @@ body {
                   -moz-osx-font-smoothing: grayscale;
                   overflow: visible;
 
-                  &:not(.disabled):hover {
+                  &:hover {
                     background: #ffffff;
                     color: #262626;
                     box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
@@ -410,7 +410,7 @@ height: 236px; */
       100% {
         -webkit-transform: translateY(calc(100vw - 739px));
         transform: translateY(calc(100vw - 739px));
-        opacity: 0%;
+        opacity: 80%;
       }
     }
     @keyframes y {
@@ -420,7 +420,7 @@ height: 236px; */
       100% {
         -webkit-transform: translateY(calc(100vw - 739px));
         transform: translateY(calc(100vw - 739px));
-        opacity: 0%;
+        opacity: 80%;
       }
     }
     @-webkit-keyframes x {
@@ -430,7 +430,7 @@ height: 236px; */
       100% {
         -webkit-transform: translateX(calc(100vh - 739px));
         transform: translateX(calc(100vh - 739px));
-        opacity: 0%;
+        opacity: 80%;
       }
     }
     @keyframes x {
@@ -440,7 +440,7 @@ height: 236px; */
       100% {
         -webkit-transform: translateX(calc(100vh - 739px));
         transform: translateX(calc(100vh - 739px));
-        opacity: 0%;
+        opacity: 80%;
       }
     }
   }
