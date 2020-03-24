@@ -1,6 +1,7 @@
 @import 'reset.scss';
-.wrongAnswer {
-  body {
+
+body {
+  &.wrongAnswer {
     background: #ff3951 !important;
 
     .background {

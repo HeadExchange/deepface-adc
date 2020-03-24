@@ -27,9 +27,9 @@ export default class Answer extends React.Component {
     console.log(effect)
     if (effect == 'wrongAnswer') {
       document.querySelector('body').classList.add('wrongAnswer')
-      // window.setTimeout(() => {
-      //   document.querySelector('body').classList.remove('wrongAnswer')
-      // }, 1500)
+      window.setTimeout(() => {
+        document.querySelector('body').classList.remove('wrongAnswer')
+      }, 1500)
     } else if (effect == 'trueAnswer') {
       document.querySelector('body').classList.add('trueAnswer')
       window.setTimeout(() => {
