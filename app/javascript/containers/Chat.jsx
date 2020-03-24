@@ -100,9 +100,9 @@ export default class Chat extends React.Component {
           <section className="chat">
             <div>{steps}</div>
           </section>
+          <DipRain />
+          <DipConfetti />
         </div>
-        <DipRain />
-        <DipConfetti />
       </div>
     )
   }

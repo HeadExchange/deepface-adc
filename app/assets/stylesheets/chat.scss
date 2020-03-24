@@ -1,6 +1,3 @@
-// Place all the styles related to the Answers controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
 @import 'reset.scss';
 @import 'fonts.scss';
 @import 'mixins.scss';
@@ -50,13 +47,13 @@ body {
   pointer-events: all;
   /* cursor: auto; */
 
-  div {
-    width: auto;
-    overflow: scroll;
-    ::-webkit-scrollbar {
-      display: none;
-    }
+  /*   div {
+  width: auto;
+  overflow: scroll;
+  ::-webkit-scrollbar {
+    display: none;
   }
+} */
   .background {
     /* filter: blur(4px); */
     width: 100vw;
@@ -73,8 +70,8 @@ body {
       width: 100vw;
       height: 20vh;
       background-image: linear-gradient(
-        rgba(121, 255, 57, 1) 72%,
-        rgba(121, 255, 57, 0) 90%
+        rgba(121, 255, 57, 1) 32%,
+        rgba(121, 255, 57, 0) 100%
       );
       z-index: 1;
     }
@@ -168,184 +165,156 @@ body {
         width: auto;
         overflow: scroll;
 
-        .replicaBlock {
-          display: flex;
-          flex-direction: row;
-          align-items: flex-end;
-          &:first-child {
-            margin-top: calc(15vh - 10px);
-          }
+        div {
+          overflow: visible;
 
-          .replicaElements {
-            .chatBlock {
-              display: flex;
-              flex-direction: row;
-              align-items: flex-end;
-              justify-content: flex-start;
-              margin-top: 10px;
+          .replicaBlock {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            &:first-child {
+              margin-top: calc(15vh - 10px);
+            }
 
-              &:first-child {
-                border-radius: 30px 30px 30px 2px;
-              }
+            .replicaElements {
+              overflow: hidden;
+              .chatBlock {
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: flex-start;
+                margin-top: 10px;
 
-              &:last-child {
-                border-radius: 2px 30px 30px 30px;
-              }
-              &:only-child {
-                border-radius: 30px 30px 30px 30px;
-              }
-              .phraseElements {
-                height: auto;
-                .chatPhrase {
-                  background: #ffffff;
-                  border-radius: 2px 30px 30px 2px;
-                  padding: 16px 32px;
-                  font-size: 32px;
-                  line-height: 40px;
-                  letter-spacing: 0.01em;
-                  font-weight: normal;
-                  font-family: 'PT Root UI Regular';
-                  width: fit-content;
-                  -webkit-font-smoothing: antialiased;
-                  -moz-osx-font-smoothing: grayscale;
-                  float: left;
-                  max-width: 918px;
+                &:first-child {
+                  border-radius: 30px 30px 30px 2px;
+                }
+
+                &:last-child {
+                  border-radius: 2px 30px 30px 30px;
+                }
+                &:only-child {
+                  border-radius: 30px 30px 30px 30px;
+                }
+                .phraseElements {
+                  height: auto;
+                  .chatPhrase {
+                    overflow: hidden;
+                    background: #ffffff;
+                    border-radius: 2px 30px 30px 2px;
+                    padding: 16px 32px;
+                    font-size: 32px;
+                    line-height: 40px;
+                    letter-spacing: 0.01em;
+                    font-weight: normal;
+                    font-family: 'PT Root UI Regular';
+                    width: fit-content;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    float: left;
+                    max-width: 918px;
+                  }
+                }
+                .userDip {
+                  width: 45px;
+                  height: 45px;
+                  background: black;
+                  border-radius: 100%;
+                  margin-right: 21px;
+                  background-image: url('./dip/dip.svg');
+                  background-size: cover;
                 }
               }
-              .userDip {
-                width: 45px;
-                height: 45px;
-                background: black;
-                border-radius: 100%;
-                margin-right: 21px;
-                background-image: url('./dip/dip.svg');
+              .chatImage {
+                overflow: hidden;
+                width: 495px;
+                height: auto;
+                background: #ffffff;
+                border-radius: 40px 40px 40px 2px;
                 background-size: cover;
+                display: flex;
+                align-items: center;
+
+                img {
+                  width: 100%;
+                }
               }
             }
-            .chatImage {
-              width: 495px;
-              height: auto;
-              background: #ffffff;
-              border-radius: 40px 40px 40px 2px;
+
+            .userDip {
+              width: 45px;
+              height: 45px;
+              background: black;
+              border-radius: 100%;
+              margin-right: 21px;
+              background-image: url('./dip/dip.svg');
               background-size: cover;
-              display: flex;
-              align-items: center;
-
-              img {
-                width: 100%;
-              }
             }
           }
 
-          .userDip {
-            width: 45px;
-            height: 45px;
-            background: black;
-            border-radius: 100%;
-            margin-right: 21px;
-            background-image: url('./dip/dip.svg');
-            background-size: cover;
-          }
-        }
-
-        .answerBlock {
-          display: flex;
-          flex-direction: row;
-          align-items: flex-end;
-          justify-content: flex-end;
-          margin-top: 100px;
-          overflow: visible;
-          .answerElements {
+          .answerBlock {
             display: flex;
             flex-direction: row;
             align-items: flex-end;
             justify-content: flex-end;
-            flex-wrap: wrap;
-            width: 73%;
+            margin-top: 100px;
             overflow: visible;
-
-            #question {
+            .answerElements {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-end;
+              justify-content: flex-end;
+              flex-wrap: wrap;
+              width: 73%;
               overflow: visible;
 
-              .answer {
-                float: right;
-                max-width: 973px;
+              #question {
                 overflow: visible;
 
-                .chatAnswer {
+                .answer {
                   float: right;
-                  font-family: 'PT Root UI Medium';
-                  font-size: 64px;
-                  line-height: 131%;
-                  letter-spacing: 0.01em;
-                  text-align: left;
-                  background: #262626;
-                  border-radius: 60px 60px 4px 60px;
-                  padding: 32px 64px;
-                  margin: 0 10px 10px 0;
-                  color: #ffffff;
-                  width: fit-content;
-                  -webkit-font-smoothing: antialiased;
-                  -moz-osx-font-smoothing: grayscale;
+                  max-width: 973px;
                   overflow: visible;
 
-                  &:not(.disabled):hover {
-                    background: #ffffff;
-                    color: #262626;
-                    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
-                    /* cursor: url('./cursors/#{$pnt}.svg'), pointer; */
-                    /* cursor: url('./cursors/#{$png}'), auto; */
-                    transition: 0.12s ease-in-out;
+                  .chatAnswer {
+                    float: right;
+                    font-family: 'PT Root UI Medium';
+                    font-size: 64px;
+                    line-height: 131%;
+                    letter-spacing: 0.01em;
+                    text-align: left;
+                    background: #262626;
+                    border-radius: 60px 60px 4px 60px;
+                    padding: 32px 64px;
+                    margin: 0 10px 10px 0;
+                    color: #ffffff;
+                    width: fit-content;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    overflow: visible;
+
+                    &:not(.disabled):hover {
+                      background: #ffffff;
+                      color: #262626;
+                      box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
+                      /* cursor: url('./cursors/#{$pnt}.svg'), pointer; */
+                      /* cursor: url('./cursors/#{$png}'), auto; */
+                      transition: 0.12s ease-in-out;
+                    }
                   }
                 }
               }
             }
-          }
-          .userDip {
-            width: 45px;
-            height: 45px;
-            background: black;
-            border-radius: 100%;
-            margin: 0 0 10px 11px;
+            .userDip {
+              width: 45px;
+              height: 45px;
+              background: black;
+              border-radius: 100%;
+              margin: 0 0 10px 11px;
+            }
           }
         }
       }
-    }
-  }
-
-  input {
-    -webkit-appearance: none;
-    color: #ffffff;
-  }
-
-  input.chatAnswer {
-    float: right;
-    font-family: 'PT Root UI Medium';
-    font-size: 64px;
-    line-height: 131%;
-    letter-spacing: 0.01em;
-    text-align: left;
-    background: #262626;
-    border-radius: 60px;
-    padding: 32px 64px;
-    margin: 0 10px 10px 0;
-    color: #ffffff;
-    /* width: 393px; */
-    width: fit-content;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow: visible;
-    outline: none;
-    border-style: none;
-    border-color: none;
-
-    &:hover {
-      background: #ffffff;
-      color: #262626;
-      box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
-      /* cursor: url('./cursors/#{$pnt}.svg'), pointer; */
-      /* cursor: url('./cursors/#{$png}'), auto; */
-      transition: 0.12s ease-in-out;
     }
   }
 
@@ -367,7 +336,9 @@ body {
     /* filter: blur(4px); */
 
     .y {
+      overflow: visible;
       .dipWhite {
+        overflow: visible;
         -webkit-animation: y 0.9s linear infinite;
         animation: y 0.9s linear infinite;
         .x {
@@ -396,6 +367,7 @@ body {
         }
       }
       .dipGreen {
+        overflow: visible;
         -webkit-animation: y 0.7s linear infinite;
         animation: y 0.7s linear infinite;
         .x {
@@ -422,6 +394,7 @@ body {
         }
       }
       .dipBlack {
+        overflow: visible;
         -webkit-animation: y 0.8s linear infinite;
         animation: y 0.8s linear infinite;
         .x {
@@ -658,5 +631,40 @@ body {
         transform: rotateX(180deg);
       }
     }
+  }
+}
+input {
+  -webkit-appearance: none;
+  color: #ffffff;
+}
+
+input.chatAnswer {
+  float: right;
+  font-family: 'PT Root UI Medium';
+  font-size: 64px;
+  line-height: 131%;
+  letter-spacing: 0.01em;
+  text-align: left;
+  background: #262626;
+  border-radius: 60px;
+  padding: 32px 64px;
+  margin: 0 10px 10px 0;
+  color: #ffffff;
+  /* width: 393px; */
+  width: fit-content;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: visible;
+  outline: none;
+  border-style: none;
+  border-color: none;
+
+  &:hover {
+    background: #ffffff;
+    color: #262626;
+    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
+    /* cursor: url('./cursors/#{$pnt}.svg'), pointer; */
+    /* cursor: url('./cursors/#{$png}'), auto; */
+    transition: 0.12s ease-in-out;
   }
 }

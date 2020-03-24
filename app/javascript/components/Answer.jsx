@@ -10,7 +10,7 @@ export default class Answer extends React.Component {
   }
 
   handleAnswerClick(id, stepId) {
-    this.props.handleAnswerClick(id)
+    // this.props.handleAnswerClick(id)
     const { disabled } = this.props
 
     if (disabled != true) {
@@ -56,6 +56,12 @@ export default class Answer extends React.Component {
       window.setTimeout(() => {
         document.querySelector('.cursor').classList.remove('bigCursor')
       }, 1500)
+      // } else if (phrase == 'flex-end') {
+      //   let dip = document.getElementsByClassName('userDip')
+      //   dip.setAttribute('style', 'margin-left: 60vh;')
+      //   window.setTimeout(() => {
+      //     dip.removeAttribute('style', 'margin-left: 60vh;')
+      //   }, 1500)
     }
   }
 
