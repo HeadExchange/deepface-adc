@@ -14,9 +14,12 @@ export default class Answer extends React.Component {
 
   autoScroll() {
     document.querySelector('.chatAnswer').scrollIntoView({
-      behavior: 'smooth'
+    behavior: 'smooth'
     })
   }
+
+
+
 
   effectClick() {
     const { effect } = this.props
