@@ -1,5 +1,7 @@
 import React from 'react'
 import Step from '../components/Step'
+import DipRain from '../components/DipRain'
+import DipConfetti from '../components/DipConfetti'
 
 export default class Chat extends React.Component {
   constructor(props) {
@@ -99,6 +101,8 @@ export default class Chat extends React.Component {
             <div>{steps}</div>
           </section>
         </div>
+        <DipRain />
+        <DipConfetti />
       </div>
     )
   }

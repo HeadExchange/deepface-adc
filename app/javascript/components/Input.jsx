@@ -6,7 +6,6 @@ export default class Input extends React.Component {
   }
 
   render() {
-
-    return <input placeholder="Введи свой email" />
+    return <input className="chatAnswer" placeholder="Сюда почту..." />
   }
 }

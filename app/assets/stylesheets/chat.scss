@@ -1,3 +1,6 @@
+// Place all the styles related to the Answers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
 @import 'reset.scss';
 @import 'fonts.scss';
 @import 'mixins.scss';
@@ -21,7 +24,7 @@ body {
     pointer-events: none;
   }
   .bigCursor {
-    animation: cursorAnimation 0.5s infinite alternate;
+    animation: cursorAnimation 0.75s infinite alternate;
     @-webkit-keyframes cursorAnimation {
       from {
         transform: scale(1);
@@ -47,6 +50,13 @@ body {
   pointer-events: all;
   /* cursor: auto; */
 
+  div {
+    width: auto;
+    overflow: scroll;
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
   .background {
     /* filter: blur(4px); */
     width: 100vw;
@@ -149,6 +159,7 @@ body {
       flex-direction: column;
       justify-content: flex-end;
       position: relative;
+      scroll-behavior: smooth;
       ::-webkit-scrollbar {
         display: none;
       }
@@ -278,7 +289,7 @@ body {
                   -moz-osx-font-smoothing: grayscale;
                   overflow: visible;
 
-                  &:hover {
+                  &:not(.disabled):hover {
                     background: #ffffff;
                     color: #262626;
                     box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
@@ -299,6 +310,42 @@ body {
           }
         }
       }
+    }
+  }
+
+  input {
+    -webkit-appearance: none;
+    color: #ffffff;
+  }
+
+  input.chatAnswer {
+    float: right;
+    font-family: 'PT Root UI Medium';
+    font-size: 64px;
+    line-height: 131%;
+    letter-spacing: 0.01em;
+    text-align: left;
+    background: #262626;
+    border-radius: 60px;
+    padding: 32px 64px;
+    margin: 0 10px 10px 0;
+    color: #ffffff;
+    /* width: 393px; */
+    width: fit-content;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: visible;
+    outline: none;
+    border-style: none;
+    border-color: none;
+
+    &:hover {
+      background: #ffffff;
+      color: #262626;
+      box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);
+      /* cursor: url('./cursors/#{$pnt}.svg'), pointer; */
+      /* cursor: url('./cursors/#{$png}'), auto; */
+      transition: 0.12s ease-in-out;
     }
   }
 
@@ -326,11 +373,10 @@ body {
         .x {
           margin-top: 100px;
           background-image: url('./effects/diprain/white_dip.svg');
-          background-size: cover;
+          background-size: contain;
+          background-repeat: no-repeat;
           width: 276px;
           height: 276px;
-          /*         width: 236px;
-height: 236px; */
           -webkit-animation: x 4s linear infinite alternate;
           animation: x 4s linear infinite alternate;
         }

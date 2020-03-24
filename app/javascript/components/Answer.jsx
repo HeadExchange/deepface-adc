@@ -45,17 +45,17 @@ export default class Answer extends React.Component {
       document.querySelector('.dipRain').classList.remove('hidden')
       window.setTimeout(() => {
         document.querySelector('.dipRain').classList.add('hidden')
-      }, 3500)
+      }, 3750)
     } else if (effect == 'dipConfetti') {
       document.querySelector('.dipConfetti').classList.remove('hidden')
       window.setTimeout(() => {
         document.querySelector('.dipConfetti').classList.add('hidden')
-      }, 3500)
+      }, 3750)
     } else if (effect == 'bigCursor') {
       document.querySelector('.cursor').classList.add('bigCursor')
       window.setTimeout(() => {
         document.querySelector('.cursor').classList.remove('bigCursor')
-      }, 2000)
+      }, 1500)
     }
   }
 

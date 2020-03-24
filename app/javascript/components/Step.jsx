@@ -1,8 +1,6 @@
 import React from 'react'
 import Replica from '../components/Replica'
 import Answer from '../components/Answer'
-import DipRain from '../components/DipRain'
-import DipConfetti from '../components/DipConfetti'
 import Input from '../components/Input'
 
 export default class Step extends React.Component {
@@ -16,7 +14,7 @@ export default class Step extends React.Component {
       elements[elements.length - 1].scrollIntoView({
         behavior: 'smooth'
       })
-    }, 1350)
+    }, 1500)
   }
 
   render() {
@@ -31,7 +29,7 @@ export default class Step extends React.Component {
     answers.map((answer, i) => {
       if (answer.display == true) {
         if (answer.phrase == 'input') {
-          answerElements.push(<Input />)
+          answerElements.push(<Input key={i} />)
         } else {
           answerElements.push(
             <Answer {...answer} handleAnswerClick={handleAnswerClick} key={i} />
@@ -50,8 +48,6 @@ export default class Step extends React.Component {
           <div className="answerElements">{answerElements}</div>
           <div className="userDip"></div>
         </div>
-        <DipRain />
-        <DipConfetti />
       </div>
     )
   }
