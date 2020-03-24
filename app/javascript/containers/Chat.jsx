@@ -52,6 +52,25 @@ export default class Chat extends React.Component {
       })
   }
 
+  // handleGetStickersClick(id) {
+  //   fetch('/v1/chat/answer', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(data)
+  //   })
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       console.log('Success:', data)
+  //       steps.push(data)
+  //       this.setState({ steps: steps })
+  //     })
+  //     .catch(error => {
+  //       console.error('Error:', error)
+  //     })
+  // }
+
   render() {
     let steps = []
 

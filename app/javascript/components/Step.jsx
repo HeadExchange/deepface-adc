@@ -1,8 +1,12 @@
 import React from 'react'
 import Replica from '../components/Replica'
 import Answer from '../components/Answer'
+<<<<<<< HEAD
 import DipRain from '../components/DipRain'
 import DipConfetti from '../components/DipConfetti'
+=======
+import Input from '../components/Input'
+>>>>>>> d0ddc888425a7117f2f706566abc125b76a755d4
 
 export default class Step extends React.Component {
   constructor(props) {
@@ -30,7 +34,7 @@ export default class Step extends React.Component {
     answers.map((answer, i) => {
       if (answer.display == true) {
         if (answer.phrase == 'input') {
-          answerElements.push(<input placeholder="Введи свой email" />)
+          answerElements.push(<Input/>)
         } else {
           answerElements.push(
             <Answer {...answer} handleAnswerClick={handleAnswerClick} key={i} />
