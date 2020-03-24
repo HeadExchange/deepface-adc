@@ -6,6 +6,7 @@ class Step < ApplicationRecord
 
   def as_json
     {
+      id: id,
       title: title,
       replicas: replicas.as_json,
       answers: answers.as_json
