@@ -1097,7 +1097,7 @@
     answers: [
       {
         position: 0,
-        phrase: 'здесь должен быть инпут'
+        phrase: 'input'
       }
     ]
   }

@@ -278,7 +278,7 @@ body {
                   -moz-osx-font-smoothing: grayscale;
                   overflow: visible;
 
-                  &:hover {
+                  &:not(.disabled):hover {
                     background: #ffffff;
                     color: #262626;
                     box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.85);

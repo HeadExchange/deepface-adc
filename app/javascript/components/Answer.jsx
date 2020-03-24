@@ -1,3 +1,4 @@
+import classnames from 'classnames'
 import React from 'react'
 
 export default class Answer extends React.Component {
@@ -8,8 +9,13 @@ export default class Answer extends React.Component {
     this.cursorEffect = this.cursorEffect.bind(this)
   }
 
-  handleAnswerClick(id) {
+  handleAnswerClick(id, stepId) {
     this.props.handleAnswerClick(id)
+    const { disabled } = this.props
+
+    if (disabled != true) {
+      this.props.handleAnswerClick(id, stepId)
+    }
   }
 
   cursorEffect() {
@@ -56,20 +62,25 @@ export default class Answer extends React.Component {
   render() {
     const { handleAnswerClick } = this
     const { effectClick, cursorEffect } = this
-    const { id, phrase, effect } = this.props
+    const { id, stepId, phrase, effect, disabled } = this.props
+
+    const classes = classnames({
+      chatAnswer: true,
+      disabled: disabled
+    })
     cursorEffect()
 
     return (
       <div
         onClick={function() {
-          handleAnswerClick(id)
+          handleAnswerClick(id, stepId)
           effectClick(effect)
         }}
         id="question"
         effect={effect}
       >
         <div className="answer">
-          <div className="chatAnswer">
+          <div className={classes}>
             <p>{phrase}</p>
           </div>
         </div>

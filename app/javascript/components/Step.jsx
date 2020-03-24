@@ -26,9 +26,15 @@ export default class Step extends React.Component {
     })
 
     answers.map((answer, i) => {
-      answerElements.push(
-        <Answer {...answer} handleAnswerClick={handleAnswerClick} key={i} />
-      )
+      if (answer.display == true) {
+        if (answer.phrase == 'input') {
+          answerElements.push(<input placeholder="Введи свой email" />)
+        } else {
+          answerElements.push(
+            <Answer {...answer} handleAnswerClick={handleAnswerClick} key={i} />
+          )
+        }
+      }
     })
 
     return (
